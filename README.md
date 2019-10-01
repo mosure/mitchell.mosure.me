@@ -1,2 +1,2 @@
-# mitchell.mosure.me
-[Mitchell Mosure's Website](https://mitchell.mosure.me)
+# [mitchell.mosure.me](https://mitchell.mosure.me)
+Mitchell Mosure's Website
