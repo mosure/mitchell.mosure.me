@@ -4,7 +4,7 @@ import './index.css';
 import { App } from './app';
 import * as serviceWorker from './serviceWorker';
 
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById('root');
 if (rootElement && rootElement.hasChildNodes()) {
     hydrate(<App />, rootElement);
 } else {
