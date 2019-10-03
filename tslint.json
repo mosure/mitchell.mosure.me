@@ -17,6 +17,7 @@
             ]
         },
         "no-submodule-imports": false,
-        "interface-name": false
+        "interface-name": false,
+        "object-literal-key-quotes": false
     }
 }

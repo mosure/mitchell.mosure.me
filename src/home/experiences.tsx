@@ -6,7 +6,7 @@ import { asAnchor, Experience, withFade } from '../shared';
 const ExperienceItem: React.FC<Experience> = (experience: Experience) => {
     return (
         <>
-            {experience.title}
+            {experience.position} @ {experience.organization}
         </>
     );
 };

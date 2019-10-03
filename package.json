@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.5.0",
+    "@material-ui/styles": "^4.5.0",
     "@types/jest": "24.0.18",
     "@types/node": "12.7.8",
     "@types/react": "16.9.4",
@@ -21,7 +22,10 @@
     "typescript": "3.6.3"
   },
   "devDependencies": {
-    "react-snap": "^1.23.0"
+    "react-snap": "^1.23.0",
+    "eslint": "^6.2.2",
+    "tslint": "^5.19.0",
+    "tslint-react": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

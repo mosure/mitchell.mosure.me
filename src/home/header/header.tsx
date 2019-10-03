@@ -26,18 +26,21 @@ const HideOnScroll: React.FC = (props) => {
 
 const Header: React.FC = () => {
     return (
-        <HideOnScroll>
-            <AppBar>
-                <Toolbar>
-                    <Hidden mdUp>
-                        <HeaderMobile/>
-                    </Hidden>
-                    <Hidden smDown>
-                        <HeaderWeb/>
-                    </Hidden>
-                </Toolbar>
-            </AppBar>
-        </HideOnScroll>
+        <>
+            <HideOnScroll>
+                <AppBar>
+                    <Toolbar>
+                        <Hidden mdUp>
+                            <HeaderMobile/>
+                        </Hidden>
+                        <Hidden smDown>
+                            <HeaderWeb/>
+                        </Hidden>
+                    </Toolbar>
+                </AppBar>
+            </HideOnScroll>
+            <Toolbar/>
+        </>
     );
 };
 

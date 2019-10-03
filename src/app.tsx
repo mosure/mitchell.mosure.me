@@ -1,22 +1,22 @@
 import React from 'react';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider } from '@material-ui/styles';
 
 import { Home } from './home';
-import { Projects } from './projects';
+import { theme } from './theme';
 
 export const App: React.FC = () => {
     return (
-        <>
+        <ThemeProvider theme={theme}>
             <CssBaseline/>
             <BrowserRouter>
-                <Switch>
-                    <Route exact path='/' component={Home}/>
-                    <Route path='/projects' component={Projects}/>
+                    <Switch>
+                        <Route exact path='/' component={Home}/>
 
-                    <Redirect to='/'/>
-                </Switch>
+                        <Redirect to='/'/>
+                    </Switch>
             </BrowserRouter>
-        </>
+        </ThemeProvider>
     );
 };

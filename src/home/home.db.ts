@@ -32,7 +32,7 @@ export const homeItems: HomeItems = [
         content: Experiences,
     },
     {
-        name: 'Work',
+        name: 'Projects',
         tag: 'project',
         fade: true,
         content: Projects,
