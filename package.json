@@ -44,6 +44,7 @@
   },
   "reactSnap": {
     "puppeteerExecutablePath": "/usr/bin/chromium-browser",
-    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"]
+    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],
+    "inlineCss": true
   }
 }
