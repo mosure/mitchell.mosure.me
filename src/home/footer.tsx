@@ -1,5 +1,4 @@
 import React from 'react';
-import { asAnchor } from '../shared';
 
 const Footer: React.FC = () => {
     return (
@@ -9,4 +8,4 @@ const Footer: React.FC = () => {
     );
 };
 
-export default asAnchor(Footer);
+export default Footer;

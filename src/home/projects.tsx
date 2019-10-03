@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { asAnchor } from '../shared';
+import { asAnchor, withFade } from '../shared';
 
 const Projects: React.FC = () => {
     return (
@@ -11,4 +11,4 @@ const Projects: React.FC = () => {
     );
 };
 
-export default asAnchor(Projects);
+export default withFade(asAnchor(Projects));

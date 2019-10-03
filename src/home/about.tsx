@@ -1,5 +1,5 @@
 import React from 'react';
-import { asAnchor } from '../shared';
+import { asAnchor, withFade } from '../shared';
 
 const About: React.FC = () => {
     return (
@@ -9,4 +9,4 @@ const About: React.FC = () => {
     );
 };
 
-export default asAnchor(About);
+export default withFade(asAnchor(About));

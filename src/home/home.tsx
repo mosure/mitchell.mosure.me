@@ -1,7 +1,7 @@
 import React from 'react';
-import Fade from 'react-reveal/Fade';
 
-import { Header } from './header';
+import Header from './header';
+import Footer from './footer';
 import { homeItems } from './home.db';
 
 export class Home extends React.Component {
@@ -14,12 +14,11 @@ export class Home extends React.Component {
                         const Child = homeItem.content;
 
                         return (
-                            <Fade key={homeItems.indexOf(homeItem)}>
-                                <Child {...homeItem}/>
-                            </Fade>
+                            <Child key={homeItems.indexOf(homeItem)} {...homeItem}/>
                         );
                     })
                 }
+                <Footer/>
             </>
         );
     }

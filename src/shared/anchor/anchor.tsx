@@ -6,7 +6,7 @@ import { AnchorProps } from './anchor.props';
 export const asAnchor = <T extends {}>(WrappedComponent: React.FC<T>): React.FC<AnchorProps & T> => {
     return (anchorProps: AnchorProps & T) => {
         return (
-            <div {...anchorProps}>
+            <>
                 {
                     anchorProps.tag &&
                     <Element name={anchorProps.tag}>
@@ -17,7 +17,7 @@ export const asAnchor = <T extends {}>(WrappedComponent: React.FC<T>): React.FC<
                     !anchorProps.tag &&
                     <WrappedComponent {...anchorProps}/>
                 }
-            </div>
+            </>
         );
     };
 };

@@ -1,13 +1,17 @@
 import React from 'react';
-import CSS from 'csstype';
+import { makeStyles } from '@material-ui/core/styles';
 
-const style: CSS.Properties = {
-
-};
+const useStyles = makeStyles({
+    fullHeight: {
+        height: '100%',
+    },
+});
 
 const Landing: React.FC = () => {
+    const classes = useStyles();
+
     return (
-        <div>
+        <div className={classes.fullHeight}>
             I am MITCHELL MOSURE
         </div>
     );
