@@ -1,9 +1,12 @@
 import React from 'react';
+import { asAnchor } from '../shared';
 
-export const About: React.FC = () => {
+const About: React.FC = () => {
     return (
         <>
             About me
         </>
     );
 };
+
+export default asAnchor(About);

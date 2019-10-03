@@ -1,14 +1,18 @@
 import React from 'react';
 import CSS from 'csstype';
 
+import { asAnchor } from '../shared';
+
 const style: CSS.Properties = {
 
 };
 
-export const Header: React.FC<string> = (props: string) => {
+const Header: React.FC = () => {
     return (
         <>
             I am MITCHELL MOSURE
         </>
     );
 };
+
+export default asAnchor(Header);

@@ -1,9 +1,12 @@
 import React from 'react';
+import { asAnchor } from '../shared';
 
-export const Footer: React.FC = () => {
+const Footer: React.FC = () => {
     return (
         <>
             LinkedIn, GitHub
         </>
     );
 };
+
+export default asAnchor(Footer);
