@@ -1,13 +1,11 @@
 import React from 'react';
 import CSS from 'csstype';
 
-import { asAnchor } from '../shared';
-
 const style: CSS.Properties = {
 
 };
 
-const Header: React.FC = () => {
+const Landing: React.FC = () => {
     return (
         <>
             I am MITCHELL MOSURE
@@ -15,4 +13,4 @@ const Header: React.FC = () => {
     );
 };
 
-export default asAnchor(Header);
+export default Landing;
