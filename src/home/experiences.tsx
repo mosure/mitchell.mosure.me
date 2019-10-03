@@ -13,7 +13,7 @@ const ExperienceItem: React.FC<Experience> = (experience: Experience) => {
 
 const Experiences: React.FC = () => {
     return (
-        <>
+        <div>
             {
                 experiences.map((experience) => {
                     return (
@@ -21,7 +21,7 @@ const Experiences: React.FC = () => {
                     );
                 })
             }
-        </>
+        </div>
     );
 };
 

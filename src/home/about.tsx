@@ -3,9 +3,9 @@ import { asAnchor } from '../shared';
 
 const About: React.FC = () => {
     return (
-        <>
-            About me
-        </>
+        <div style={{height: '1000px'}}>
+            <h1>About me</h1>
+        </div>
     );
 };
 

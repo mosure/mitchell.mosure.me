@@ -3,9 +3,9 @@ import { asAnchor } from '../shared';
 
 const Footer: React.FC = () => {
     return (
-        <>
+        <div>
             LinkedIn, GitHub
-        </>
+        </div>
     );
 };
 

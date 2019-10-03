@@ -5,9 +5,9 @@ import { asAnchor } from '../shared';
 
 const Projects: React.FC = () => {
     return (
-        <>
-            <Link to='/projects'/>
-        </>
+        <div>
+            <Link to='/projects'>Projects</Link>
+        </div>
     );
 };
 
