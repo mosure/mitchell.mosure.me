@@ -16,6 +16,7 @@
                 "allow-pascal-case"
             ]
         },
-        "no-submodule-imports": false
+        "no-submodule-imports": false,
+        "interface-name": false
     }
 }
