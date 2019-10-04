@@ -15,9 +15,9 @@ const Experiences: React.FC = () => {
     return (
         <div>
             {
-                experiences.map((experience) => {
+                experiences.map((experience, index) => {
                     return (
-                        <ExperienceItem key={experiences.indexOf(experience)} {...experience}/>
+                        <ExperienceItem key={index} {...experience}/>
                     );
                 })
             }

@@ -10,11 +10,11 @@ export class Home extends React.Component {
             <>
                 <Header/>
                 {
-                    homeItems.map((homeItem) => {
+                    homeItems.map((homeItem, index) => {
                         const Child = homeItem.content;
 
                         return (
-                            <Child key={homeItems.indexOf(homeItem)} {...homeItem}/>
+                            <Child key={index} {...homeItem}/>
                         );
                     })
                 }

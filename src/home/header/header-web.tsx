@@ -54,9 +54,9 @@ const HeaderWeb: React.FC = () => {
         <>
             <Grid container justify='flex-end' align-items='stretch'>
                 {
-                    homeItems.map((homeItem) => {
+                    homeItems.map((homeItem, index) => {
                         return (
-                            <HeaderAnchorButton key={homeItems.indexOf(homeItem)} {...homeItem}/>
+                            <HeaderAnchorButton key={index} {...homeItem}/>
                         );
                     })
                 }
