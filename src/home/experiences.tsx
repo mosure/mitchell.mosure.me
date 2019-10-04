@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { experiences } from '../data';
-import { asAnchor, Experience, withFade } from '../shared';
+import { asAnchor, Experience, withFade, useInlineHr } from '../shared';
 
 const ExperienceItem: React.FC<Experience> = (experience: Experience) => {
     return (
@@ -12,8 +12,11 @@ const ExperienceItem: React.FC<Experience> = (experience: Experience) => {
 };
 
 const Experiences: React.FC = () => {
+    const inlineClass = useInlineHr();
+
     return (
-        <div style={{height: '1000px'}}>
+        <div>
+            <h1 className={inlineClass.inlinehr}>Experiences</h1>
             {
                 experiences.map((experience, index) => {
                     return (

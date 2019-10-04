@@ -66,7 +66,6 @@ const Header: React.FC = () => {
                     </Toolbar>
                 </AppBar>
             </HideOnScroll>
-            <Toolbar/>
         </>
     );
 };

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { WithStyles, withStyles, createStyles } from '@material-ui/styles';
 
 import Header from './header';
@@ -7,9 +6,12 @@ import Footer from './footer';
 import { homeItems } from './home.db';
 
 const styles = createStyles({
-    sectionPadding: {
-        paddingTop: '150px',
-        paddingBottom: '150px',
+    homeContainer: {
+        padding: '0px 150px',
+    },
+    homeSection: {
+        padding: '150px 0px',
+        margin: '0px auto',
     },
 });
 
@@ -20,17 +22,26 @@ class Home extends React.Component<IProps> {
         return (
             <>
                 <Header/>
-                {
-                    homeItems.map((homeItem, index) => {
-                        const Child = homeItem.content;
+                <div className={this.props.classes.homeContainer}>
+                    {
+                        homeItems.map((homeItem, index) => {
+                            const Child = homeItem.content;
 
-                        return (
-                            <div key={index} className={this.props.classes.sectionPadding}>
-                                <Child {...homeItem}/>
-                            </div>
-                        );
-                    })
-                }
+                            let style = {};
+                            if (index === 0) {
+                                style = {
+                                    minHeight: '100vh',
+                                };
+                            }
+
+                            return (
+                                <div key={index} style={style} className={this.props.classes.homeSection}>
+                                    <Child {...homeItem}/>
+                                </div>
+                            );
+                        })
+                    }
+                </div>
                 <Footer/>
             </>
         );

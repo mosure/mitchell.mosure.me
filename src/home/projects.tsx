@@ -1,12 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-import { asAnchor, withFade } from '../shared';
+import { asAnchor, withFade, useInlineHr } from '../shared';
 
 const Projects: React.FC = () => {
+    const inlineClass = useInlineHr();
+
     return (
         <div>
-            <Link to='/projects'>Projects</Link>
+            <h1 className={inlineClass.inlinehr}>Projects</h1>
         </div>
     );
 };
