@@ -15,11 +15,11 @@ const useStyles = makeStyles((theme) =>
         },
         greeting: {
             color: theme.palette.secondary.main,
-            margin: 0,
+            marginBottom: 10,
         },
         name: {
             color: theme.palette.text.primary,
-            marginBottom: 4,
+            marginBottom: 15,
         },
         firstName: {
 

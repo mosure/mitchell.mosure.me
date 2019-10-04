@@ -1,6 +1,5 @@
 import React from 'react';
 import { WithStyles, withStyles, createStyles, makeStyles } from '@material-ui/core';
-import { Element } from 'react-scroll';
 
 import Header from './header';
 import Footer from './footer';
@@ -36,9 +35,9 @@ const SuperContainer: React.FC = (props) => {
 
     return (
         <>
-            <div className={classes.homeContainer}>
+            <section id='Home' className={classes.homeContainer}>
                 {props.children}
-            </div>
+            </section>
         </>
     );
 };
@@ -64,14 +63,14 @@ class Home extends React.Component<IProps> {
                             }
 
                             return (
-                                <Element
-                                    name={homeItem.name || 'none'}
+                                <section
+                                    id={homeItem.name || ''}
                                     key={index}
                                     style={style}
                                     className={this.props.classes.homeSection}
                                 >
                                     <Child {...homeItem}/>
-                                </Element>
+                                </section>
                             );
                         })
                     }

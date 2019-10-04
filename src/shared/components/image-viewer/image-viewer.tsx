@@ -3,7 +3,12 @@ import { Image } from '../..';
 
 export const ImageViewer: React.FC<Image & ImageViewerProps> = (props: Image & ImageViewerProps) => {
     return (
-        <img style={props.style} src={props.path} alt={props.alternateText}/>
+        <img
+            draggable={false}
+            style={props.style}
+            src={props.path}
+            alt={props.alternateText}
+        />
     );
 };
 

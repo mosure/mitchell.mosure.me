@@ -6,7 +6,7 @@ export const globals: Globals = {
     greeting: 'Hello, my name is',
     firstName: 'Mitchell',
     lastName: 'Mosure',
-    statement: 'I build leading tech',
+    statement: 'I build ...',
     description: `
 I am a full-stack software engineer from Madison, WI with interests in
 designing and building robust, high-quality technologies from silicon to web.
