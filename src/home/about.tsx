@@ -1,10 +1,14 @@
 import React from 'react';
-import { asAnchor, withFade } from '../shared';
+
+import { asAnchor, withFade, useInlineHr } from '../shared';
 
 const About: React.FC = () => {
+    const inlineClass = useInlineHr();
+
     return (
-        <div style={{height: '1000px'}}>
-            <h1 className=''>About me</h1>
+        <div style={{minHeight: '800px'}}>
+            <h1 className={inlineClass.inlinehr}>About me</h1>
+
         </div>
     );
 };

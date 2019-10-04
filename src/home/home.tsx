@@ -1,10 +1,21 @@
 import React from 'react';
 
+import { WithStyles, withStyles, createStyles } from '@material-ui/styles';
+
 import Header from './header';
 import Footer from './footer';
 import { homeItems } from './home.db';
 
-export class Home extends React.Component {
+const styles = createStyles({
+    sectionPadding: {
+        paddingTop: '150px',
+        paddingBottom: '150px',
+    },
+});
+
+interface IProps extends WithStyles<typeof styles> {}
+
+class Home extends React.Component<IProps> {
     render() {
         return (
             <>
@@ -14,7 +25,9 @@ export class Home extends React.Component {
                         const Child = homeItem.content;
 
                         return (
-                            <Child key={index} {...homeItem}/>
+                            <div key={index} className={this.props.classes.sectionPadding}>
+                                <Child {...homeItem}/>
+                            </div>
                         );
                     })
                 }
@@ -23,3 +36,5 @@ export class Home extends React.Component {
         );
     }
 }
+
+export default withStyles(styles)(Home);
