@@ -52,9 +52,6 @@ const HeaderAnchorButton: React.FC<HomeItem> = (props: HomeItem) => {
 const HeaderWeb: React.FC = () => {
     return (
         <>
-            <div>
-                ICON
-            </div>
             <Grid container justify='flex-end' align-items='stretch'>
                 {
                     homeItems.map((homeItem) => {
