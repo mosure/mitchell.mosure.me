@@ -77,8 +77,8 @@ const Landing: React.FC = () => {
 
                 <br/>
 
-                <Button variant='outlined' color='secondary'>
-                    Resume
+                <Button target='_blank' href='mitchell.mosure.pdf' size='large' variant='outlined' color='secondary'>
+                    View Resume
                 </Button>
             </Grid>
         </Grid>
