@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) =>
         },
         name: {
             color: theme.palette.text.primary,
-            margin: 0,
+            marginBottom: 4,
         },
         firstName: {
 
@@ -29,10 +29,12 @@ const useStyles = makeStyles((theme) =>
         },
         statement: {
             color: theme.palette.text.hint,
-            margin: 0,
+            marginBottom: 36,
         },
         description: {
             color: theme.palette.text.hint,
+            marginBottom: 40,
+            maxWidth: '450px',
         },
     }),
 );
