@@ -1,6 +1,5 @@
 import React from 'react';
-import { WithStyles, withStyles, createStyles } from '@material-ui/styles';
-import Container from '@material-ui/core/Container';
+import { WithStyles, withStyles, createStyles, makeStyles } from '@material-ui/core';
 import { Element } from 'react-scroll';
 
 import Header from './header';
@@ -8,14 +7,41 @@ import Footer from './footer';
 import { homeItems } from './home.db';
 
 const styles = createStyles({
-    homeContainer: {
-        padding: '0px 150px',
-    },
     homeSection: {
         padding: '150px 0px',
-        margin: '0px auto',
     },
 });
+
+const useStyles = makeStyles((theme) =>
+    createStyles({
+        homeContainer: {
+            [theme.breakpoints.up('xs')]: {
+                padding: '0px 15px',
+            },
+            [theme.breakpoints.up('sm')]: {
+                padding: '0px 50px',
+            },
+            [theme.breakpoints.up('md')]: {
+                padding: '0px 150px',
+            },
+            [theme.breakpoints.up('lg')]: {
+                padding: '0px 250px',
+            },
+        },
+    }),
+);
+
+const SuperContainer: React.FC = (props) => {
+    const classes = useStyles();
+
+    return (
+        <>
+            <div className={classes.homeContainer}>
+                {props.children}
+            </div>
+        </>
+    );
+};
 
 interface IProps extends WithStyles<typeof styles> {}
 
@@ -25,7 +51,7 @@ class Home extends React.Component<IProps> {
             <>
                 <Header/>
 
-                <Container maxWidth='lg'>
+                <SuperContainer>
                     {
                         homeItems.map((homeItem, index) => {
                             const Child = homeItem.content;
@@ -33,8 +59,6 @@ class Home extends React.Component<IProps> {
                             let style = {};
                             if (index === 0) {
                                 style = {
-                                    padding: '150px 0px',
-                                    margin: '0px auto',
                                     minHeight: '100vh',
                                 };
                             }
@@ -51,7 +75,7 @@ class Home extends React.Component<IProps> {
                             );
                         })
                     }
-                </Container>
+                </SuperContainer>
 
                 <Footer/>
             </>
