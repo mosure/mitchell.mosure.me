@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) =>
     createStyles({
         container: {
             maxWidth: '1000px',
-            height: '100%',
+            minHeight: '100vh',
             margin: '0px auto',
         },
         greeting: {

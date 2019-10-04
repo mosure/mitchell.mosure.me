@@ -59,7 +59,7 @@ class Home extends React.Component<IProps> {
                             let style = {};
                             if (index === 0) {
                                 style = {
-                                    minHeight: '100vh',
+                                    paddingTop: '0px',
                                 };
                             }
 
