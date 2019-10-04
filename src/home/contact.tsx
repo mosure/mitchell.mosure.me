@@ -1,5 +1,5 @@
 import React from 'react';
-import { asAnchor, withFade, useInlineHr } from '../shared';
+import { withFade, useInlineHr } from '../shared';
 
 const Contact: React.FC = () => {
     const inlineClass = useInlineHr();
@@ -12,4 +12,4 @@ const Contact: React.FC = () => {
     );
 };
 
-export default withFade(asAnchor(Contact));
+export default withFade(Contact);

@@ -1,6 +1,7 @@
 import React from 'react';
 import { WithStyles, withStyles, createStyles } from '@material-ui/styles';
 import Container from '@material-ui/core/Container';
+import { Element } from 'react-scroll';
 
 import Header from './header';
 import Footer from './footer';
@@ -39,9 +40,14 @@ class Home extends React.Component<IProps> {
                             }
 
                             return (
-                                <div key={index} style={style} className={this.props.classes.homeSection}>
+                                <Element
+                                    name={homeItem.name || 'none'}
+                                    key={index}
+                                    style={style}
+                                    className={this.props.classes.homeSection}
+                                >
                                     <Child {...homeItem}/>
-                                </div>
+                                </Element>
                             );
                         })
                     }

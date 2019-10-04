@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) =>
 
 const HeaderButton: React.FC<HomeItem & { doClose: () => void }> = (props: HomeItem & { doClose: () => void }) => {
     const scrollTo = () => {
-        scroller.scrollTo(props.tag as string, {
+        scroller.scrollTo(props.name as string, {
             duration: 500,
             smooth: 'easeInOutCubic',
         });
@@ -33,7 +33,7 @@ const HeaderButton: React.FC<HomeItem & { doClose: () => void }> = (props: HomeI
     return (
         <>
             {
-                props.tag && props.name &&
+                props.name &&
                 <ListItem button onClick={scrollTo}>
                     <ListItemText>
                         {props.name}

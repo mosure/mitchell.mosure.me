@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { experiences } from '../data';
-import { asAnchor, Experience, withFade, useInlineHr } from '../shared';
+import { Experience, withFade, useInlineHr } from '../shared';
 
 const ExperienceItem: React.FC<Experience> = (experience: Experience) => {
     return (
@@ -28,4 +28,4 @@ const Experiences: React.FC = () => {
     );
 };
 
-export default withFade(asAnchor(Experiences));
+export default withFade(Experiences);

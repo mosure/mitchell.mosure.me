@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AnchorProps, WithFadeProps } from '../shared';
+import { WithFadeProps } from '../shared';
 
 import Landing from './landing';
 import About from './about';
@@ -8,9 +8,9 @@ import Experiences from './experiences';
 import Projects from './projects';
 import Contact from './contact';
 
-export interface HomeItem extends AnchorProps, WithFadeProps {
+export interface HomeItem extends WithFadeProps {
     name?: string;
-    content: React.FC<AnchorProps | {}>;
+    content: React.FC<WithFadeProps | {}>;
 }
 
 export interface HomeItems extends Array<HomeItem> {}
@@ -21,25 +21,21 @@ export const homeItems: HomeItems = [
     },
     {
         name: 'About',
-        tag: 'about',
         fade: true,
         content: About,
     },
     {
         name: 'Experience',
-        tag: 'experience',
         fade: true,
         content: Experiences,
     },
     {
         name: 'Projects',
-        tag: 'project',
         fade: true,
         content: Projects,
     },
     {
         name: 'Contact',
-        tag: 'contact',
         fade: true,
         content: Contact,
     },

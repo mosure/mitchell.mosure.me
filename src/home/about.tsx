@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { asAnchor, withFade, useInlineHr } from '../shared';
+import { withFade, useInlineHr } from '../shared';
 
 const About: React.FC = () => {
     const inlineClass = useInlineHr();
@@ -13,4 +13,4 @@ const About: React.FC = () => {
     );
 };
 
-export default withFade(asAnchor(About));
+export default withFade(About);

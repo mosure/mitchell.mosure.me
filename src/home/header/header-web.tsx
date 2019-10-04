@@ -31,12 +31,12 @@ const HeaderAnchorButton: React.FC<HomeItem> = (props: HomeItem) => {
     return (
         <>
             {
-                props.tag && props.name &&
+                props.name &&
                 <Grid className={classes.anchorItem} item>
                     <Link
                         className={classes.anchorLink}
                         activeClass={classes.anchorLinkActive}
-                        to={props.tag}
+                        to={props.name}
                         spy
                         smooth='easeInOutCubic'
                         duration={500}
