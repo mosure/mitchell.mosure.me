@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import { Image } from '../..';
 
-export const ImageViewer: React.FC<Image> = (image: Image) => {
+export const ImageViewer: React.FC<Image & ImageViewerProps> = (props: Image & ImageViewerProps) => {
     return (
-        <img src={image.path} alt={image.alternateText}/>
+        <img style={props.style} src={props.path} alt={props.alternateText}/>
     );
 };
+
+export interface ImageViewerProps {
+    style?: CSSProperties;
+}

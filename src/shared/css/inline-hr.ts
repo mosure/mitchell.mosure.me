@@ -4,15 +4,23 @@ import { makeStyles } from '@material-ui/core';
 export const useInlineHr = makeStyles((theme) =>
     createStyles({
         inlinehr: {
+            display: 'flex',
+            alignItems: 'center',
+            whiteSpace: 'nowrap',
             '&::after': {
                 backgroundColor: theme.palette.text.hint,
                 content: '""',
-                display: 'inline-block',
+                display: 'block',
                 height: '1px',
                 position: 'relative',
                 verticalAlign: 'middle',
                 width: '350px',
-                left: '0.5em',
+                maxWidth: '350px',
+                marginLeft: '16px',
+                top: '3px',
+                [theme.breakpoints.down('sm')]: {
+                    width: '100%',
+                },
             },
         },
     }),
