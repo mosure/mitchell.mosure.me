@@ -1,5 +1,6 @@
 import React from 'react';
 import { WithStyles, withStyles, createStyles } from '@material-ui/styles';
+import Container from '@material-ui/core/Container';
 
 import Header from './header';
 import Footer from './footer';
@@ -22,7 +23,8 @@ class Home extends React.Component<IProps> {
         return (
             <>
                 <Header/>
-                <div className={this.props.classes.homeContainer}>
+
+                <Container maxWidth='lg'>
                     {
                         homeItems.map((homeItem, index) => {
                             const Child = homeItem.content;
@@ -30,6 +32,8 @@ class Home extends React.Component<IProps> {
                             let style = {};
                             if (index === 0) {
                                 style = {
+                                    padding: '150px 0px',
+                                    margin: '0px auto',
                                     minHeight: '100vh',
                                 };
                             }
@@ -41,7 +45,8 @@ class Home extends React.Component<IProps> {
                             );
                         })
                     }
-                </div>
+                </Container>
+
                 <Footer/>
             </>
         );
