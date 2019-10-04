@@ -10,3 +10,29 @@ body {
 html, body, #root {
     height: 100%
 }
+
+.inlinehr {
+    overflow: hidden;
+    text-align: center;
+}
+
+/* .inlinehr:before, */
+.inlinehr:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+
+/* .inlinehr:before {
+    right: 0.5em;
+    margin-left: -50%;
+} */
+
+.inlinehr:after {
+    left: 0.5em;
+    margin-right: -50%;
+}

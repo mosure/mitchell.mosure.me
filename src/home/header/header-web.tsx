@@ -1,15 +1,15 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { Link } from 'react-scroll';
 
 import { HomeItem, homeItems } from '../home.db';
 
-const useStyles = makeStyles((theme) => {
-    return {
+const useStyles = makeStyles((theme) =>
+    createStyles({
         anchorItem: {
-            paddingLeft: 16,
-            paddingRight: 16,
+            paddingLeft: 32,
+            paddingRight: 32,
             cursor: 'pointer',
         },
         anchorLink: {
@@ -22,8 +22,8 @@ const useStyles = makeStyles((theme) => {
         anchorLinkActive: {
             color: theme.palette.secondary.main,
         },
-    };
-});
+    }),
+);
 
 const HeaderAnchorButton: React.FC<HomeItem> = (props: HomeItem) => {
     const classes = useStyles();
@@ -52,7 +52,7 @@ const HeaderAnchorButton: React.FC<HomeItem> = (props: HomeItem) => {
 const HeaderWeb: React.FC = () => {
     return (
         <>
-            <Grid container justify='flex-end' align-items='stretch'>
+            <Grid container justify='flex-end' alignItems='center'>
                 {
                     homeItems.map((homeItem, index) => {
                         return (

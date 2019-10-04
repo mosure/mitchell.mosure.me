@@ -5,49 +5,38 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import Toolbar from '@material-ui/core/Toolbar';
 import Drawer from '@material-ui/core/Drawer';
-import { makeStyles } from '@material-ui/core/styles';
-import { Link } from 'react-scroll';
+import { makeStyles, createStyles } from '@material-ui/core/styles';
+import { scroller } from 'react-scroll';
 
 import { HomeItem, homeItems } from '../home.db';
 
-const useStyles = makeStyles((theme) => {
-    return {
+const useStyles = makeStyles((theme) =>
+    createStyles({
         fullList: {
             width: 'auto',
         },
-        anchorLink: {
-            paddingTop: 8,
-            paddingBottom: 8,
-            '&:hover': {
-                color: theme.palette.secondary.main,
-            },
-        },
-        anchorLinkActive: {
-            color: theme.palette.secondary.main,
-        },
-    };
-});
+    }),
+);
 
-const HeaderAnchorButton: React.FC<HomeItem> = (props: HomeItem) => {
-    const classes = useStyles();
+const HeaderButton: React.FC<HomeItem & { doClose: () => void }> = (props: HomeItem & { doClose: () => void }) => {
+    const scrollTo = () => {
+        scroller.scrollTo(props.tag as string, {
+            duration: 500,
+            smooth: 'easeInOutCubic',
+        });
+
+        props.doClose();
+    };
 
     return (
         <>
             {
                 props.tag && props.name &&
-                <ListItem button>
+                <ListItem button onClick={scrollTo}>
                     <ListItemText>
-                        <Link
-                            className={classes.anchorLink}
-                            activeClass={classes.anchorLinkActive}
-                            to={props.tag}
-                            spy
-                            smooth='easeInOutCubic'
-                            duration={500}
-                        >
-                            {props.name}
-                        </Link>
+                        {props.name}
                     </ListItemText>
                 </ListItem>
             }
@@ -84,11 +73,12 @@ const HeaderMobile: React.FC = () => {
                     onClick={closeDrawer}
                     onKeyDown={closeDrawer}
                 >
+                    <Toolbar/>
                     <List>
                         {
                             homeItems.map((homeItem, index) => {
                                 return (
-                                    <HeaderAnchorButton key={index} {...homeItem}/>
+                                    <HeaderButton key={index} doClose={closeDrawer} {...homeItem}/>
                                 );
                             })
                         }

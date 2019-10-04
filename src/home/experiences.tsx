@@ -13,7 +13,7 @@ const ExperienceItem: React.FC<Experience> = (experience: Experience) => {
 
 const Experiences: React.FC = () => {
     return (
-        <div>
+        <div style={{height: '1000px'}}>
             {
                 experiences.map((experience, index) => {
                     return (

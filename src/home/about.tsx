@@ -4,7 +4,7 @@ import { asAnchor, withFade } from '../shared';
 const About: React.FC = () => {
     return (
         <div style={{height: '1000px'}}>
-            <h1>About me</h1>
+            <h1 className=''>About me</h1>
         </div>
     );
 };

@@ -9,9 +9,11 @@ export const asAnchor = <T extends {}>(WrappedComponent: React.FC<T>): React.FC<
             <>
                 {
                     anchorProps.tag &&
-                    <Element name={anchorProps.tag}>
-                        <WrappedComponent {...anchorProps}/>
-                    </Element>
+                    <>
+                        <Element name={anchorProps.tag}>
+                            <WrappedComponent {...anchorProps}/>
+                        </Element>
+                    </>
                 }
                 {
                     !anchorProps.tag &&

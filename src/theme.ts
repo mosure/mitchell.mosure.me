@@ -18,7 +18,7 @@ export const theme = createMuiTheme({
         text: {
             primary: '#FFF',
             secondary: 'rgba(0, 0, 0, 0.87)',
-            hint: 'rgba(255, 255, 255, 0.50)',
+            hint: 'rgba(255, 255, 255, 0.60)',
         },
     },
 });

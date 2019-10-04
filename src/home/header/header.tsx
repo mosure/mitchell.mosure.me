@@ -5,18 +5,23 @@ import Slide from '@material-ui/core/Slide';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { animateScroll } from 'react-scroll';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, createStyles } from '@material-ui/core';
 
 import HeaderMobile from './header-mobile';
 import HeaderWeb from './header-web';
 
 import { LogoStatic } from '../../shared';
 
-const useStyles = makeStyles({
-    pointer: {
-        cursor: 'pointer',
-    },
-});
+const useStyles = makeStyles((theme) =>
+    createStyles({
+        pointer: {
+            cursor: 'pointer',
+        },
+        appBar: {
+            zIndex: theme.zIndex.modal + 1,
+        },
+    }),
+);
 
 const HideOnScroll: React.FC = (props) => {
     const trigger = useScrollTrigger();
@@ -47,7 +52,7 @@ const Header: React.FC = () => {
     return (
         <>
             <HideOnScroll>
-                <AppBar>
+                <AppBar className={classes.appBar}>
                     <Toolbar>
                         <div className={classes.pointer} onClick={scrollToTop}>
                             <LogoStatic style={{height: '48px', width: '48px'}}/>
