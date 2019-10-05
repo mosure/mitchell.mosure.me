@@ -59,5 +59,10 @@ export const theme = responsiveFontSizes(createMuiTheme({
         body1: {
             color: paletteTheme.palette.text.hint,
         },
+        body2: {
+            color: paletteTheme.palette.text.hint,
+            fontFamily: '"SF Mono", "Roboto Mono", "Lucida Console", Monaco, monospace, sans-serif',
+            fontSize: '0.75rem',
+        },
     },
 }));

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Typography } from '@material-ui/core';
 
 import { experiences } from '../data';
 import { Experience, withFade, useInlineHr } from '../shared';
@@ -16,7 +17,9 @@ const Experiences: React.FC = () => {
 
     return (
         <div>
-            <h1 className={inlineClass.inlinehr}>Experiences</h1>
+            <Typography variant='h4' className={inlineClass.inlinehr}>
+                Experiences
+            </Typography>
             {
                 experiences.map((experience, index) => {
                     return (

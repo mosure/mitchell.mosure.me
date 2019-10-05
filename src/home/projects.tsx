@@ -1,4 +1,5 @@
 import React from 'react';
+import { Typography } from '@material-ui/core';
 
 import { withFade, useInlineHr } from '../shared';
 
@@ -7,7 +8,9 @@ const Projects: React.FC = () => {
 
     return (
         <div>
-            <h1 className={inlineClass.inlinehr}>Projects</h1>
+            <Typography variant='h4' className={inlineClass.inlinehr}>
+                    Projects
+            </Typography>
         </div>
     );
 };
