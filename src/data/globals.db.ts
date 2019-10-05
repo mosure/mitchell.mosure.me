@@ -20,12 +20,12 @@ designing and building robust, high-quality technologies from silicon to web.
     },
     toolkit: [
         'C#',
-        'TypeScript',
+        'Python',
         'React',
         'Angular',
-        'Node.js',
-        'MongoDB',
         'SQL',
+        'MongoDB',
+        'Node.js',
         'AWS',
     ],
 };

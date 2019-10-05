@@ -4,6 +4,7 @@ import {
     Grid,
     makeStyles,
     Typography,
+    Link,
 } from '@material-ui/core';
 import { ArrowRightOutlined } from '@material-ui/icons';
 
@@ -23,7 +24,12 @@ const useStyles = makeStyles((theme) =>
             paddingBottom: '48px',
         },
         imageContainer: {
-            paddingLeft: '96px',
+            marginLeft: '96px',
+            maxWidth: '300px',
+            maxHeight: '300px',
+            [theme.breakpoints.down('sm')]: {
+                margin: '0px auto',
+            },
         },
         aboutText: {
             color: theme.palette.text.hint,
@@ -53,11 +59,17 @@ const About: React.FC = () => {
                 <Grid item xs={12} sm={6}>
                     <div className={classes.textContainer}>
                         <Typography className={classes.aboutText} variant='body1'>
-                            About me
+                            Hello!
                         </Typography>
 
                         <Typography className={classes.aboutText} variant='body1'>
-                            About me schooling
+                            I will be graduating from the
+                            &nbsp;
+                            <Link color='secondary' href='https://www.wisc.edu/' target='_blank'>
+                                University of Wisconsin - Madison
+                            </Link>
+                            &nbsp;
+                            with a Bachelor's Degree in Computer Sciences and Mathematics.
                         </Typography>
 
                         <Typography className={classes.aboutText} variant='body1'>
@@ -90,7 +102,7 @@ const About: React.FC = () => {
                     globals.image &&
                     <Grid item xs={12} sm={6}>
                         <div className={classes.imageContainer}>
-                            <ImageViewer style={{borderRadius: '4px', width: '200px'}} {...globals.image}/>
+                            <ImageViewer {...globals.image}/>
                         </div>
                     </Grid>
                 }
