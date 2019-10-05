@@ -54,13 +54,14 @@ const About: React.FC = () => {
                     <div className={classes.textContainer}>
                         <Typography className={classes.aboutText} variant='body1'>
                             About me
+                        </Typography>
 
-                            <p>
-                                About me schooling
-                            </p>
-                            <p>
-                                Here are recent technologies I have been working with:
-                            </p>
+                        <Typography className={classes.aboutText} variant='body1'>
+                            About me schooling
+                        </Typography>
+
+                        <Typography className={classes.aboutText} variant='body1'>
+                            Here are recent technologies I have been working with:
                         </Typography>
 
                         <Grid container justify='center' spacing={1}>
