@@ -60,7 +60,7 @@ const HeaderMobile: React.FC = () => {
         <>
             <Grid container justify='flex-end' align-items='stretch'>
                 <Grid item>
-                    <IconButton onClick={openDrawer}>
+                    <IconButton color='secondary' onClick={openDrawer}>
                         <MenuIcon/>
                     </IconButton>
                 </Grid>
