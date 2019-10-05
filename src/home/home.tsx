@@ -39,11 +39,9 @@ const SuperContainer: React.FC = (props) => {
     const classes = useStyles();
 
     return (
-        <>
-            <section id='Home' className={classes.homeContainer}>
-                {props.children}
-            </section>
-        </>
+        <section id='Home' className={classes.homeContainer}>
+            {props.children}
+        </section>
     );
 };
 

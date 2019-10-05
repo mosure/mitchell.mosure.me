@@ -32,11 +32,7 @@ const useStyles = makeStyles((theme) =>
             },
         },
         aboutText: {
-            color: theme.palette.text.hint,
             marginBottom: '24px',
-        },
-        toolkitItem: {
-            color: theme.palette.text.hint,
         },
     }),
 );
@@ -59,7 +55,7 @@ const About: React.FC = () => {
                 <Grid item xs={12} sm={6}>
                     <div className={classes.textContainer}>
                         <Typography className={classes.aboutText} variant='body1'>
-                            Hello! 
+                            Hello!
                         </Typography>
 
                         <Typography className={classes.aboutText} variant='body1'>
@@ -86,7 +82,7 @@ const About: React.FC = () => {
                                                     <ArrowRightOutlined color='secondary'/>
                                                 </Grid>
                                                 <Grid item>
-                                                    <Typography className={classes.toolkitItem} variant='body1'>
+                                                    <Typography variant='body1'>
                                                         {tool}
                                                     </Typography>
                                                 </Grid>

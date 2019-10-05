@@ -1,8 +1,6 @@
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 
-const bps = createMuiTheme();
-
-export const theme = responsiveFontSizes(createMuiTheme({
+const paletteTheme = createMuiTheme({
     palette: {
         primary: {
             light: '#6B6E70',
@@ -23,19 +21,23 @@ export const theme = responsiveFontSizes(createMuiTheme({
             hint: 'rgba(255, 255, 255, 0.60)',
         },
     },
+});
+
+export const theme = responsiveFontSizes(createMuiTheme({
+    palette: paletteTheme.palette,
     typography: {
         h1: {
             fontWeight: 500,
-            [bps.breakpoints.up('md')]: {
+            [paletteTheme.breakpoints.up('md')]: {
                 fontSize: '6rem',
             },
-            [bps.breakpoints.down('md')]: {
+            [paletteTheme.breakpoints.down('md')]: {
                 fontSize: '5rem',
             },
-            [bps.breakpoints.down('sm')]: {
+            [paletteTheme.breakpoints.down('sm')]: {
                 fontSize: '4rem',
             },
-            [bps.breakpoints.down('xs')]: {
+            [paletteTheme.breakpoints.down('xs')]: {
                 fontSize: '3rem',
             },
         },
@@ -53,6 +55,9 @@ export const theme = responsiveFontSizes(createMuiTheme({
         },
         h6: {
             fontWeight: 500,
+        },
+        body1: {
+            color: paletteTheme.palette.text.hint,
         },
     },
 }));

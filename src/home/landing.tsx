@@ -35,7 +35,6 @@ const useStyles = makeStyles((theme) =>
             marginBottom: 36,
         },
         description: {
-            color: theme.palette.text.hint,
             marginBottom: 40,
             maxWidth: '450px',
         },
