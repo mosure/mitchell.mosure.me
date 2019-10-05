@@ -3,7 +3,7 @@ import {
     WithStyles,
     withStyles,
     createStyles,
-    makeStyles
+    makeStyles,
 } from '@material-ui/core';
 
 import Header from './header';
