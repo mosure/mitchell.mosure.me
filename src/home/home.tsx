@@ -1,5 +1,10 @@
 import React from 'react';
-import { WithStyles, withStyles, createStyles, makeStyles } from '@material-ui/core';
+import {
+    WithStyles,
+    withStyles,
+    createStyles,
+    makeStyles
+} from '@material-ui/core';
 
 import Header from './header';
 import Footer from './footer';

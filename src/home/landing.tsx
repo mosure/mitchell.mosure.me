@@ -1,10 +1,13 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import { makeStyles, createStyles } from '@material-ui/core/styles';
+import {
+    createStyles,
+    Grid,
+    makeStyles,
+    Button,
+    Typography,
+} from '@material-ui/core';
 
 import { globals } from '../data';
-import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) =>
     createStyles({
