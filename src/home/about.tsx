@@ -1,12 +1,16 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles, createStyles } from '@material-ui/core';
+import {
+    createStyles,
+    Grid,
+    makeStyles,
+    Typography,
+} from '@material-ui/core';
+import { ArrowRightOutlined } from '@material-ui/icons';
 
 import { withFade, useInlineHr, ImageViewer } from '../shared';
 import { globals } from '../data';
 
-const useStyles = makeStyles(() =>
+const useStyles = makeStyles((theme) =>
     createStyles({
         container: {
             maxWidth: '1000px',
@@ -20,6 +24,13 @@ const useStyles = makeStyles(() =>
         },
         imageContainer: {
             paddingLeft: '96px',
+        },
+        aboutText: {
+            color: theme.palette.text.hint,
+            marginBottom: '24px',
+        },
+        toolkitItem: {
+            color: theme.palette.text.hint,
         },
     }),
 );
@@ -41,18 +52,37 @@ const About: React.FC = () => {
             >
                 <Grid item xs={12} sm={6}>
                     <div className={classes.textContainer}>
-                        <p>
+                        <Typography className={classes.aboutText} variant='body1'>
                             About me
-                        </p>
-                        <p>
-                            About me schooling
-                        </p>
-                        <p>
-                            Here are recent technologies I have been working with:
-                        </p>
-                        <p>
-                            Item1...
-                        </p>
+
+                            <p>
+                                About me schooling
+                            </p>
+                            <p>
+                                Here are recent technologies I have been working with:
+                            </p>
+                        </Typography>
+
+                        <Grid container justify='center' spacing={1}>
+                            {
+                                globals.toolkit && globals.toolkit.map((tool, index) => {
+                                    return (
+                                        <Grid item xs={6} key={index}>
+                                            <Grid container>
+                                                <Grid item>
+                                                    <ArrowRightOutlined color='secondary'/>
+                                                </Grid>
+                                                <Grid item>
+                                                    <Typography className={classes.toolkitItem} variant='body1'>
+                                                        {tool}
+                                                    </Typography>
+                                                </Grid>
+                                            </Grid>
+                                        </Grid>
+                                    );
+                                })
+                            }
+                        </Grid>
                     </div>
                 </Grid>
                 {
