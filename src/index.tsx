@@ -5,6 +5,13 @@ import { App } from './app';
 import * as serviceWorker from './serviceWorker';
 import 'typeface-roboto';
 
+// Scroll to top on boot
+window.onbeforeunload = () => {
+    window.scrollTo({
+        top: 0,
+    });
+};
+
 const rootElement = document.getElementById('root');
 if (rootElement!.hasChildNodes()) {
     hydrate(<App/>, rootElement);
