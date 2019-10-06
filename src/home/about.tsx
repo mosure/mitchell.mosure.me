@@ -8,7 +8,8 @@ import {
 } from '@material-ui/core';
 import { ArrowRightOutlined } from '@material-ui/icons';
 
-import { withFade, useInlineHr, ImageViewer } from '../shared';
+import { HomeItemContainer } from './home-item-container';
+import { withFade, ImageViewer } from '../shared';
 import { globals } from '../data';
 
 const useStyles = makeStyles((theme) =>
@@ -38,15 +39,10 @@ const useStyles = makeStyles((theme) =>
 );
 
 const About: React.FC = () => {
-    const inlineClass = useInlineHr();
     const classes = useStyles();
 
     return (
-        <div className={classes.container}>
-            <Typography variant='h4' className={inlineClass.inlinehr}>
-                About me
-            </Typography>
-
+        <HomeItemContainer header='About me'>
             <Grid
                 container
                 justify='center'
@@ -103,7 +99,7 @@ const About: React.FC = () => {
                     </Grid>
                 }
             </Grid>
-        </div>
+        </HomeItemContainer>
     );
 };
 

@@ -8,6 +8,7 @@ import {
 
 import Header from './header';
 import Footer from './footer';
+import Landing from './landing';
 import { homeItems } from './home.db';
 
 const styles = createStyles({
@@ -52,6 +53,7 @@ class Home extends React.Component<IProps> {
         return (
             <>
                 <Header/>
+                <Landing/>
 
                 <SuperContainer>
                     {

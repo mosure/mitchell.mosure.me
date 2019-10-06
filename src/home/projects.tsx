@@ -1,17 +1,14 @@
 import React from 'react';
 import { Typography } from '@material-ui/core';
 
-import { withFade, useInlineHr } from '../shared';
+import { withFade } from '../shared';
+import { HomeItemContainer } from './home-item-container';
 
 const Projects: React.FC = () => {
-    const inlineClass = useInlineHr();
-
     return (
-        <div>
-            <Typography variant='h4' className={inlineClass.inlinehr}>
-                    Projects
-            </Typography>
-        </div>
+        <HomeItemContainer header='Projects'>
+
+        </HomeItemContainer>
     );
 };
 

@@ -2,7 +2,6 @@ import React from 'react';
 
 import { WithFadeProps } from '../shared';
 
-import Landing from './landing';
 import About from './about';
 import Experiences from './experiences';
 import Projects from './projects';
@@ -16,9 +15,6 @@ export interface HomeItem extends WithFadeProps {
 export interface HomeItems extends Array<HomeItem> {}
 
 export const homeItems: HomeItems = [
-    {
-        content: Landing,
-    },
     {
         name: 'About',
         fade: true,

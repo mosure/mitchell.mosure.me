@@ -1,13 +1,11 @@
 import React from 'react';
 import { Typography, makeStyles, createStyles } from '@material-ui/core';
 
-import { withFade, useInlineHr } from '../shared';
+import { withFade } from '../shared';
+import { HomeItemContainer } from './home-item-container';
 
 const useStyles = makeStyles((theme) =>
     createStyles({
-        container: {
-            minHeight: '800px',
-        },
         contactText: {
             color: theme.palette.text.hint,
             marginBottom: '24px',
@@ -16,19 +14,14 @@ const useStyles = makeStyles((theme) =>
 );
 
 const Contact: React.FC = () => {
-    const inlineClass = useInlineHr();
     const classes = useStyles();
 
     return (
-        <div className={classes.container}>
-            <Typography variant='h4' className={inlineClass.inlinehr}>
-                Say Hello
-            </Typography>
-
+        <HomeItemContainer header='Contact Me'>
             <Typography variant='body1'>
                 Contact info
             </Typography>
-        </div>
+        </HomeItemContainer>
     );
 };
 

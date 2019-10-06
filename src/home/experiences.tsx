@@ -1,8 +1,15 @@
 import React from 'react';
-import { Typography } from '@material-ui/core';
+import { makeStyles, createStyles } from '@material-ui/core';
 
 import { experiences } from '../data';
-import { Experience, withFade, useInlineHr } from '../shared';
+import { Experience, withFade } from '../shared';
+import { HomeItemContainer } from './home-item-container';
+
+const useStyles = makeStyles(() =>
+    createStyles({
+
+    }),
+);
 
 const ExperienceItem: React.FC<Experience> = (experience: Experience) => {
     return (
@@ -13,13 +20,10 @@ const ExperienceItem: React.FC<Experience> = (experience: Experience) => {
 };
 
 const Experiences: React.FC = () => {
-    const inlineClass = useInlineHr();
+    const classes = useStyles();
 
     return (
-        <div>
-            <Typography variant='h4' className={inlineClass.inlinehr}>
-                Experiences
-            </Typography>
+        <HomeItemContainer header='Experiences'>
             {
                 experiences.map((experience, index) => {
                     return (
@@ -27,7 +31,7 @@ const Experiences: React.FC = () => {
                     );
                 })
             }
-        </div>
+        </HomeItemContainer>
     );
 };
 
