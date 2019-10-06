@@ -47,9 +47,8 @@ const Landing: React.FC = () => {
     return (
         <Grid
             container
-            justify='center'
-            alignItems='flex-start'
-            direction='column'
+            justify='flex-start'
+            alignItems='center'
             className={classes.container}
         >
             <Grid item>

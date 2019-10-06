@@ -53,9 +53,9 @@ class Home extends React.Component<IProps> {
         return (
             <>
                 <Header/>
-                <Landing/>
 
                 <SuperContainer>
+                    <Landing/>
                     {
                         homeItems.map((homeItem, index) => {
                             const Child = homeItem.content;
