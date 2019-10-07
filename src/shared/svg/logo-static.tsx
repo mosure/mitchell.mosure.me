@@ -16,7 +16,7 @@ export const LogoStatic: React.FC<any> = (props: any) => {
             >
                 <title>Logo</title>
                 <circle
-                    fill={theme.palette.primary.main}
+                    fillOpacity={0}
                     strokeMiterlimit={10}
                     stroke={theme.palette.secondary.main}
                     strokeLinecap='round'
@@ -31,7 +31,7 @@ export const LogoStatic: React.FC<any> = (props: any) => {
                     strokeLinecap='round'
                     strokeWidth='64px'
                     strokeLinejoin='round'
-                    points='218 639.93 368.39 259.43 443.59 449.68 518.79 639.93'
+                    points='218 639.93 368.39 259.43 518.79 639.93'
                 />
                 <polyline
                     fill='none'
@@ -39,7 +39,7 @@ export const LogoStatic: React.FC<any> = (props: any) => {
                     strokeLinecap='round'
                     strokeWidth='64px'
                     strokeLinejoin='round'
-                    points='681 639.57 605.8 449.32 531.53 261.42 530.61 259.07 449.69 464.48'
+                    points='449.69 464.48 530.61 259.43 681 639.93'
                 />
             </svg>
         </div>

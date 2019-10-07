@@ -4,6 +4,7 @@ import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { Link } from 'react-scroll';
 
 import { HomeItem, homeItems } from '../home.db';
+import { DropFade } from '../../shared';
 
 const useStyles = makeStyles((theme) =>
     createStyles({
@@ -32,18 +33,20 @@ const HeaderAnchorButton: React.FC<HomeItem> = (props: HomeItem) => {
         <>
             {
                 props.name &&
-                <Grid className={classes.anchorItem} item>
-                    <Link
-                        className={classes.anchorLink}
-                        activeClass={classes.anchorLinkActive}
-                        to={props.name}
-                        spy
-                        smooth='easeInOutCubic'
-                        duration={500}
-                    >
-                        {props.name}
-                    </Link>
-                </Grid>
+                <DropFade>
+                    <Grid className={classes.anchorItem} item>
+                        <Link
+                            className={classes.anchorLink}
+                            activeClass={classes.anchorLinkActive}
+                            to={props.name}
+                            spy
+                            smooth='easeInOutCubic'
+                            duration={500}
+                        >
+                            {props.name}
+                        </Link>
+                    </Grid>
+                </DropFade>
             }
         </>
     );
@@ -51,17 +54,15 @@ const HeaderAnchorButton: React.FC<HomeItem> = (props: HomeItem) => {
 
 const HeaderWeb: React.FC = () => {
     return (
-        <>
-            <Grid container justify='flex-end' alignItems='center'>
-                {
-                    homeItems.map((homeItem, index) => {
-                        return (
-                            <HeaderAnchorButton key={index} {...homeItem}/>
-                        );
-                    })
-                }
-            </Grid>
-        </>
+        <Grid container justify='flex-end' alignItems='center'>
+            {
+                homeItems.map((homeItem, index) => {
+                    return (
+                        <HeaderAnchorButton key={index.toString()} {...homeItem}/>
+                    );
+                })
+            }
+        </Grid>
     );
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles, createStyles, Box } from '@material-ui/core';
+import posed from 'react-pose';
 
 import { Image } from '../..';
 
@@ -14,23 +15,34 @@ const useStyles = makeStyles((theme) =>
         defaultImage: {
             display: 'block',
             borderRadius: '4px',
-            filter: 'grayscale(100%)',
             maxWidth: '100%',
             maxHeight: '100%',
-            '&:hover': {
-                filter: 'grayscale(0%)',
-            },
-            transition: 'filter 750ms',
         },
     }),
 );
+
+const HoverImage = posed.img({
+    hoverable: true,
+    init: {
+        filter: 'grayscale(100%)',
+        transition: {
+            duration: 500,
+        },
+    },
+    hover: {
+        filter: 'grayscale(0%)',
+        transition: {
+            duration: 500,
+        },
+    },
+});
 
 export const ImageViewer: React.FC<Image & ImageViewerProps> = (props: Image & ImageViewerProps) => {
     const classes = useStyles();
 
     return (
         <Box boxShadow={4}>
-            <img
+            <HoverImage
                 className={[props.className, classes.defaultImage].join(' ')}
                 draggable={false}
                 src={props.path}

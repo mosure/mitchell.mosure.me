@@ -4,13 +4,13 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Drawer from '@material-ui/core/Drawer';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { scroller } from 'react-scroll';
 
 import { HomeItem, homeItems } from '../home.db';
+import { DrawerOpenClose } from '../../shared';
 
 const useStyles = makeStyles((theme) =>
     createStyles({
@@ -48,8 +48,8 @@ const HeaderMobile: React.FC = () => {
     const classes = useStyles();
     const [drawerOpen, setDrawer] = useState(false);
 
-    const openDrawer = () => {
-        setDrawer(true);
+    const toggleDrawer = () => {
+        setDrawer(!drawerOpen);
     };
 
     const closeDrawer = () => {
@@ -60,8 +60,8 @@ const HeaderMobile: React.FC = () => {
         <>
             <Grid container justify='flex-end' align-items='stretch'>
                 <Grid item>
-                    <IconButton color='secondary' onClick={openDrawer}>
-                        <MenuIcon/>
+                    <IconButton color='secondary' onClick={toggleDrawer}>
+                        <DrawerOpenClose open={drawerOpen}/>
                     </IconButton>
                 </Grid>
             </Grid>

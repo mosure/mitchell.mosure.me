@@ -12,6 +12,8 @@
     "@types/react-dom": "16.9.1",
     "@types/react-router-dom": "^5.1.0",
     "@types/react-scroll": "^1.5.4",
+    "flubber": "^0.4.2",
+    "popmotion": "^8.7.0",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "react-pose": "^4.0.8",

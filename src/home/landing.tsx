@@ -8,6 +8,7 @@ import {
 } from '@material-ui/core';
 
 import { globals } from '../data';
+import { LogoAnimated } from '../shared';
 
 const useStyles = makeStyles((theme) =>
     createStyles({
@@ -81,6 +82,9 @@ const Landing: React.FC = () => {
                 <Button target='_blank' href='mitchell.mosure.pdf' size='large' variant='outlined' color='secondary'>
                     View Resume
                 </Button>
+            </Grid>
+            <Grid item>
+                <LogoAnimated/>
             </Grid>
         </Grid>
     );

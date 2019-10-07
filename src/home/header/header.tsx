@@ -1,16 +1,19 @@
-import React from 'react';
-import Hidden from '@material-ui/core/Hidden';
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Slide from '@material-ui/core/Slide';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
+import React, { useState } from 'react';
 import { animateScroll } from 'react-scroll';
-import { makeStyles, createStyles } from '@material-ui/core';
+import {
+    makeStyles,
+    createStyles,
+    Toolbar,
+    AppBar,
+    Slide,
+    Hidden,
+    useScrollTrigger,
+} from '@material-ui/core';
 
 import HeaderMobile from './header-mobile';
 import HeaderWeb from './header-web';
 
-import { LogoStatic } from '../../shared';
+import { LogoStatic, DropFade } from '../../shared';
 
 const useStyles = makeStyles((theme) =>
     createStyles({
@@ -49,8 +52,14 @@ const scrollToTop = () => {
 const Header: React.FC = () => {
     const classes = useStyles();
 
+    const [loaded, setLoaded] = useState(false);
+
+    setTimeout(() => {
+        setLoaded(true);
+    }, 500);
+
     return (
-        <>
+        <DropFade pose={loaded ? 'load' : 'init'} delay={500} staggerChildren={100} beforeChildren>
             <HideOnScroll>
                 <AppBar className={classes.appBar}>
                     <Toolbar>
@@ -66,7 +75,7 @@ const Header: React.FC = () => {
                     </Toolbar>
                 </AppBar>
             </HideOnScroll>
-        </>
+        </DropFade>
     );
 };
 
