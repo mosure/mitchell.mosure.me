@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
     createStyles,
     makeStyles,
 } from '@material-ui/core';
 
+import Intro from './intro';
 import Header from './header';
 import Footer from './footer';
 import Landing from './landing';
@@ -47,12 +48,17 @@ const Home: React.FC = () => {
 
     const [loaded, setLoaded] = useState(false);
 
-    setTimeout(() => {
-        setLoaded(true);
-    }, 500);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoaded(true);
+        }, 5000);
+
+        return () => clearTimeout(timer);
+    });
 
     return (
         <>
+            {/* <Intro/> */}
             <DisplayNone pose={loaded ? 'load' : 'init'} staggerChildren={100} beforeChildren>
                 <Header/>
 
