@@ -51,7 +51,7 @@ const Home: React.FC = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoaded(true);
-        }, 5250);
+        }, 4000);
 
         return () => clearTimeout(timer);
     }, []);

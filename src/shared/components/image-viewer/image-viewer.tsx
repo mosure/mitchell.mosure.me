@@ -6,12 +6,6 @@ import { Image } from '../..';
 
 const useStyles = makeStyles((theme) =>
     createStyles({
-        overlay: {
-            position: 'absolute',
-            width: 'inherit',
-            height: 'inherit',
-            backgroundColor: 'red',
-        },
         defaultImage: {
             display: 'block',
             borderRadius: '4px',

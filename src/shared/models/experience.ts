@@ -6,9 +6,8 @@ export interface Experience {
     description: string[];
     location?: string;
     url?: string;
-    startDate?: Date;                   // If left blank, render a 'not started yet'
-    endDate?: Date;                     // If left blank but contains startDate, render 'ongoing'
-    image?: Image;
+    period?: string;
+    image: Image;
 }
 
 export interface ExperienceList extends Array<Experience> { }

@@ -14,7 +14,7 @@ export const LogoAnimated: React.FC<any> = (props: any) => {
                 viewBox='0 0 899 899'
                 preserveAspectRatio='xMidYMid meet'
             >
-                <title>Logo</title>
+                <title>Animated Logo</title>
                 <circle
                     fillOpacity={0}
                     strokeMiterlimit={10}
@@ -31,8 +31,8 @@ export const LogoAnimated: React.FC<any> = (props: any) => {
                     <animate
                         id='circleIn'
                         attributeName='stroke-dashoffset'
-                        begin='f2a.end'
-                        dur='1.25s'
+                        begin='f2a.end - 1s'
+                        dur='1.5s'
                         fill='freeze'
                         calcMode='spline'
                         keyTimes='0; 1'

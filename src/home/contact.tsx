@@ -7,7 +7,6 @@ import { HomeItemContainer } from './home-item-container';
 const useStyles = makeStyles((theme) =>
     createStyles({
         contactText: {
-            color: theme.palette.text.hint,
             marginBottom: '24px',
         },
     }),
@@ -18,7 +17,7 @@ const Contact: React.FC = () => {
 
     return (
         <HomeItemContainer header='Contact Me'>
-            <Typography variant='body1'>
+            <Typography variant='body1' className={classes.contactText}>
                 Contact info
             </Typography>
         </HomeItemContainer>

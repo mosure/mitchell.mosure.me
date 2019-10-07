@@ -22,14 +22,14 @@ const Zoom = posed.div({
         scale: 1,
         transition: {
             ease: 'easeIn',
-            duration: 500,
+            duration: 300,
         },
     },
     init: {
         scale: 0,
         transition: {
             ease: 'easeOut',
-            duration: 500,
+            duration: 300,
         },
         applyAtEnd: { display: 'none' },
     },
@@ -43,7 +43,7 @@ const Intro: React.FC = () => {
     useEffect(() => {
         const timer1 = setTimeout(() => setState(true), 200);
 
-        const timer2 = setTimeout(() => setState(false), 4500);
+        const timer2 = setTimeout(() => setState(false), 3500);
 
         return () => {
             clearTimeout(timer1);

@@ -1,5 +1,7 @@
 import { ExperienceList } from '../shared';
 
+import * as ctech from '../assets/experiences/ctech.png';
+
 export const experiences: ExperienceList = [
     {
         position: 'Software Engineering Intern',
@@ -8,22 +10,12 @@ export const experiences: ExperienceList = [
             'Description Line 1',
             'Description Line 2',
         ],
-        location: 'Weston Wisconsin',
-        startDate: new Date(),
-        endDate: new Date(),
+        location: 'Weston, Wisconsin',
+        period: '',
         url: 'LINK TO CTECH',
         image: {
             alternateText: 'CTech Logo',
-            path: 'assets/ctech.png',
+            path: ctech.default,
         },
-    },
-    {
-        position: 'Software Engineering',
-        organization: 'CTech Manufacturing',
-        description: [
-            'Description Line 1',
-            'Description Line 2',
-        ],
-        location: 'Weston Wisconsin',
     },
 ];
