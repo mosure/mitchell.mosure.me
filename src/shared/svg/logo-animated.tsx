@@ -36,7 +36,7 @@ export const LogoAnimated: React.FC<any> = (props: any) => {
                         fill='freeze'
                         calcMode='spline'
                         keyTimes='0; 1'
-                        keySplines='.25, .1, .25, 1'
+                        keySplines='0.25, 0.1, 0.25, 1'
                         from='-3700'
                         to='0'
                     />
@@ -57,7 +57,7 @@ export const LogoAnimated: React.FC<any> = (props: any) => {
                         fill='freeze'
                         calcMode='spline'
                         keyTimes='0; 1'
-                        keySplines='.25, .1, .25, 1'
+                        keySplines='0.25, 0.1, 0.25, 1'
                         from='449.5,449.5 449.5,449.5 449.5,449.5'
                         to='449.5,639.93 449.5,259.43 449.5,639.93'
                     />
@@ -69,7 +69,7 @@ export const LogoAnimated: React.FC<any> = (props: any) => {
                         fill='freeze'
                         calcMode='spline'
                         keyTimes='0; 1'
-                        keySplines='.25, .1, .25, 1'
+                        keySplines='0.25, 0.1, 0.25, 1'
                         from='449.5,639.93 449.5,259.43 449.5,639.93'
                         to='299.11,639.93 449.5,259.43 599.89,639.93'
                     />
@@ -81,7 +81,7 @@ export const LogoAnimated: React.FC<any> = (props: any) => {
                         fill='freeze'
                         calcMode='spline'
                         keyTimes='0; 1'
-                        keySplines='.25, .1, .25, 1'
+                        keySplines='0.25, 0.1, 0.25, 1'
                         from='299.11,639.93 449.5,259.43 599.89,639.93'
                         to='218,639.93 368.39,259.43 518.79,639.93'
                     />
@@ -102,7 +102,7 @@ export const LogoAnimated: React.FC<any> = (props: any) => {
                         fill='freeze'
                         calcMode='spline'
                         keyTimes='0; 1'
-                        keySplines='.25, .1, .25, 1'
+                        keySplines='0.25, 0.1, 0.25, 1'
                         from='449.5,449.5 449.5,449.5 449.5,449.5'
                         to='449.5,259.43 449.5,259.43 449.5,639.93'
                     />
@@ -114,7 +114,7 @@ export const LogoAnimated: React.FC<any> = (props: any) => {
                         fill='freeze'
                         calcMode='spline'
                         keyTimes='0; 1'
-                        keySplines='.25, .1, .25, 1'
+                        keySplines='0.25, 0.1, 0.25, 1'
                         from='449.5,259.43 449.5,259.43 449.5,639.93'
                         to='449.5,259.43 449.5,259.43 599.89,639.93'
                     />
@@ -126,7 +126,7 @@ export const LogoAnimated: React.FC<any> = (props: any) => {
                         fill='freeze'
                         calcMode='spline'
                         keyTimes='0; 1'
-                        keySplines='.25, .1, .25, 1'
+                        keySplines='0.25, 0.1, 0.25, 1'
                         from='449.5,259.43 449.5,259.43 599.89,639.93'
                         to='443.59,449.68 530.61,259.43 681,639.93'
                     />
