@@ -52,9 +52,9 @@ const scrollToTop = () => {
 const Header: React.FC = () => {
     const classes = useStyles();
     return (
-        <DropFade staggerChildren={100} beforeChildren>
-            <HideOnScroll>
-                <AppBar className={classes.appBar}>
+        <HideOnScroll>
+            <AppBar className={classes.appBar}>
+                <DropFade staggerChildren={100} beforeChildren>
                     <Toolbar>
                         <div className={classes.pointer} onClick={scrollToTop}>
                             <LogoStatic style={{height: '48px', width: '48px'}}/>
@@ -66,9 +66,9 @@ const Header: React.FC = () => {
                             <HeaderWeb/>
                         </Hidden>
                     </Toolbar>
-                </AppBar>
-            </HideOnScroll>
-        </DropFade>
+                </DropFade>
+            </AppBar>
+        </HideOnScroll>
     );
 };
 
