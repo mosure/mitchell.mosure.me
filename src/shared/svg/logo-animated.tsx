@@ -52,7 +52,7 @@ export const LogoAnimated: React.FC<any> = (props: any) => {
                     <animate
                         id='f0a'
                         attributeName='points'
-                        begin='0.5s'
+                        begin='load + 0.5s'
                         dur='0.75s'
                         fill='freeze'
                         calcMode='spline'
@@ -97,7 +97,7 @@ export const LogoAnimated: React.FC<any> = (props: any) => {
                     <animate
                         id='f0b'
                         attributeName='points'
-                        begin='0.5s'
+                        begin='load + 0.5s'
                         dur='0.75s'
                         fill='freeze'
                         calcMode='spline'
