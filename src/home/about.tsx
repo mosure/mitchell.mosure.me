@@ -14,10 +14,6 @@ import { globals } from '../data';
 
 const useStyles = makeStyles((theme) =>
     createStyles({
-        container: {
-            maxWidth: '1000px',
-            margin: '0px auto',
-        },
         subContainer: {
             paddingTop: '24px',
         },
