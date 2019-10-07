@@ -6,6 +6,9 @@ import { LogoAnimated } from '../shared';
 
 const useStyles = makeStyles(() =>
     createStyles({
+        ssrInit: {
+            display: 'none',
+        },
         container: {
             height: '100vh',
             width: '100vw',
@@ -52,7 +55,7 @@ const Intro: React.FC = () => {
     }, []);
 
     return (
-        <Zoom pose={loaded ? 'load' : 'init'}>
+        <Zoom className={classes.ssrInit} pose={loaded ? 'load' : 'init'}>
             <Grid className={classes.container} container justify='center' alignItems='center'>
                 <Grid item>
                     <LogoAnimated className={classes.logo}/>
