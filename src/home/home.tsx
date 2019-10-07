@@ -1,7 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
-    WithStyles,
-    withStyles,
     createStyles,
     makeStyles,
 } from '@material-ui/core';
@@ -10,15 +8,13 @@ import Header from './header';
 import Footer from './footer';
 import Landing from './landing';
 import { homeItems } from './home.db';
-
-const styles = createStyles({
-    homeSection: {
-        padding: '150px 0px',
-    },
-});
+import { DisplayNone } from '../shared';
 
 const useStyles = makeStyles((theme) =>
     createStyles({
+        homeSection: {
+            padding: '150px 0px',
+        },
         homeContainer: {
             [theme.breakpoints.up('xs')]: {
                 padding: '0px 15px',
@@ -46,12 +42,18 @@ const SuperContainer: React.FC = (props) => {
     );
 };
 
-interface IProps extends WithStyles<typeof styles> {}
+const Home: React.FC = () => {
+    const classes = useStyles();
 
-class Home extends React.Component<IProps> {
-    render() {
-        return (
-            <>
+    const [loaded, setLoaded] = useState(false);
+
+    setTimeout(() => {
+        setLoaded(true);
+    }, 500);
+
+    return (
+        <>
+            <DisplayNone pose={loaded ? 'load' : 'init'} staggerChildren={100} beforeChildren>
                 <Header/>
 
                 <SuperContainer>
@@ -72,7 +74,7 @@ class Home extends React.Component<IProps> {
                                     id={homeItem.name || ''}
                                     key={index}
                                     style={style}
-                                    className={this.props.classes.homeSection}
+                                    className={classes.homeSection}
                                 >
                                     <Child {...homeItem}/>
                                 </section>
@@ -82,9 +84,9 @@ class Home extends React.Component<IProps> {
                 </SuperContainer>
 
                 <Footer/>
-            </>
-        );
-    }
-}
+            </DisplayNone>
+        </>
+    );
+};
 
-export default withStyles(styles)(Home);
+export default Home;

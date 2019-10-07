@@ -51,15 +51,8 @@ const scrollToTop = () => {
 
 const Header: React.FC = () => {
     const classes = useStyles();
-
-    const [loaded, setLoaded] = useState(false);
-
-    setTimeout(() => {
-        setLoaded(true);
-    }, 500);
-
     return (
-        <DropFade pose={loaded ? 'load' : 'init'} delay={500} staggerChildren={100} beforeChildren>
+        <DropFade staggerChildren={100} beforeChildren>
             <HideOnScroll>
                 <AppBar className={classes.appBar}>
                     <Toolbar>
