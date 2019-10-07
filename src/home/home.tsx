@@ -51,14 +51,14 @@ const Home: React.FC = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoaded(true);
-        }, 5000);
+        }, 5250);
 
         return () => clearTimeout(timer);
-    });
+    }, []);
 
     return (
         <>
-            {/* <Intro/> */}
+            <Intro/>
             <DisplayNone pose={loaded ? 'load' : 'init'} staggerChildren={100} beforeChildren>
                 <Header/>
 

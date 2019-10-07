@@ -18,18 +18,20 @@ const useStyles = makeStyles(() =>
 
 const Zoom = posed.div({
     load: {
-        //applyAtStart: { display: 'block' },
+        applyAtStart: { display: 'block' },
         scale: 1,
         transition: {
+            ease: 'easeIn',
             duration: 500,
         },
     },
     init: {
         scale: 0,
         transition: {
+            ease: 'easeOut',
             duration: 500,
         },
-        //applyAtEnd: { display: 'none' },
+        applyAtEnd: { display: 'none' },
     },
 });
 
@@ -39,17 +41,15 @@ const Intro: React.FC = () => {
     const [loaded, setState] = useState(false);
 
     useEffect(() => {
-        console.log('rendered');
-
         const timer1 = setTimeout(() => setState(true), 200);
 
-        const timer2 = setTimeout(() => setState(false), 5000);
+        const timer2 = setTimeout(() => setState(false), 4500);
 
         return () => {
             clearTimeout(timer1);
             clearTimeout(timer2);
         };
-    });
+    }, []);
 
     return (
         <Zoom pose={loaded ? 'load' : 'init'}>
