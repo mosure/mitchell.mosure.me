@@ -25,6 +25,9 @@ const useStyles = makeStyles(() =>
         description: {
             paddingBottom: '24px',
         },
+        descriptionItem: {
+            display: 'flex',
+        },
         imageContainer: {
             maxWidth: '300px',
             maxHeight: '250px',
@@ -71,20 +74,16 @@ const ExperienceItem: React.FC<Experience> = (experience: Experience) => {
                     {
                         experience.description.map((description, index) => {
                             return (
-                                <Grid key={index} container>
-                                    <Grid item>
-                                        <ArrowRightOutlined color='secondary'/>
-                                    </Grid>
-                                    <Grid item>
-                                        <Typography
-                                            key={index}
-                                            variant='body1'
-                                            className={classes.description}
-                                        >
-                                            {description}
-                                        </Typography>
-                                    </Grid>
-                                </Grid>
+                                <div key={index} className={classes.descriptionItem}>
+                                    <ArrowRightOutlined color='secondary'/>
+                                    <Typography
+                                        key={index}
+                                        variant='body1'
+                                        className={classes.description}
+                                    >
+                                        {description}
+                                    </Typography>
+                                </div>
                             );
                         })
                     }
