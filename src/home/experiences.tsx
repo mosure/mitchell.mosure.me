@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles, createStyles, Typography, Grid, Link } from '@material-ui/core';
+import { ArrowRightOutlined } from '@material-ui/icons';
 
 import { experiences } from '../data';
 import { Experience, withFade, ImageViewer } from '../shared';
@@ -25,9 +26,11 @@ const useStyles = makeStyles(() =>
             paddingBottom: '24px',
         },
         imageContainer: {
-            width: '300px',
-            height: '250px',
+            maxWidth: '300px',
+            maxHeight: '250px',
             margin: 'auto',
+            width: '100%',
+            height: '100%',
         },
     }),
 );
@@ -68,13 +71,20 @@ const ExperienceItem: React.FC<Experience> = (experience: Experience) => {
                     {
                         experience.description.map((description, index) => {
                             return (
-                                <Typography
-                                    key={index}
-                                    variant='body1'
-                                    className={classes.description}
-                                >
-                                    {description}
-                                </Typography>
+                                <Grid key={index} container>
+                                    <Grid item>
+                                        <ArrowRightOutlined color='secondary'/>
+                                    </Grid>
+                                    <Grid item>
+                                        <Typography
+                                            key={index}
+                                            variant='body1'
+                                            className={classes.description}
+                                        >
+                                            {description}
+                                        </Typography>
+                                    </Grid>
+                                </Grid>
                             );
                         })
                     }

@@ -11,8 +11,8 @@ export const experiences: ExperienceList = [
             'Description Line 2',
         ],
         location: 'Weston, Wisconsin',
-        period: '',
-        url: 'LINK TO CTECH',
+        period: 'September, 2014 - September, 2019',
+        url: 'https://www.ctechmanufacturing.com/',
         image: {
             alternateText: 'CTech Logo',
             path: ctech.default,
