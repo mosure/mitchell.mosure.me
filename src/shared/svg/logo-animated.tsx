@@ -7,6 +7,7 @@ export const LogoAnimated: React.FC<any> = (props: any) => {
     return (
         <div {...props}>
             <svg
+                id='logo'
                 height='100%'
                 width='100%'
                 xmlns='http://www.w3.org/2000/svg'
@@ -41,18 +42,44 @@ export const LogoAnimated: React.FC<any> = (props: any) => {
                         to='0'
                     />
                 </circle>
+                <circle
+                    fill={theme.palette.secondary.main}
+                    cx='449.5'
+                    cy='449.5'
+                    r='32'
+                >
+                    <animate
+                        id='cinit'
+                        attributeName='fill-opacity'
+                        begin='0.5s'
+                        dur='0.01s'
+                        fill='freeze'
+                        from='1'
+                        to='0'
+                    />
+                </circle>
                 <polyline
                     fill='none'
                     stroke={theme.palette.secondary.main}
+                    strokeOpacity={0}
                     strokeLinecap='round'
                     strokeWidth='64px'
                     strokeLinejoin='round'
                     points='449.5,449.5 449.5,449.5 449.5,449.5'
                 >
                     <animate
+                        id='finita'
+                        attributeName='stroke-opacity'
+                        begin='cinit.end'
+                        dur='0.01s'
+                        fill='freeze'
+                        from='0'
+                        to='1'
+                    />
+                    <animate
                         id='f0a'
                         attributeName='points'
-                        begin='load + 0.5s'
+                        begin='finita.end'
                         dur='0.75s'
                         fill='freeze'
                         calcMode='spline'
@@ -89,15 +116,25 @@ export const LogoAnimated: React.FC<any> = (props: any) => {
                 <polyline
                     fill='none'
                     stroke={theme.palette.secondary.main}
+                    strokeOpacity={0}
                     strokeLinecap='round'
                     strokeWidth='64px'
                     strokeLinejoin='round'
                     points='449.5,449.5 449.5,449.5 449.5,449.5'
                 >
                     <animate
+                        id='finitb'
+                        attributeName='stroke-opacity'
+                        begin='cinit.end'
+                        dur='0.01s'
+                        fill='freeze'
+                        from='0'
+                        to='1'
+                    />
+                    <animate
                         id='f0b'
                         attributeName='points'
-                        begin='load + 0.5s'
+                        begin='finitb.end'
                         dur='0.75s'
                         fill='freeze'
                         calcMode='spline'

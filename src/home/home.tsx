@@ -14,7 +14,7 @@ import { DisplayNone } from '../shared';
 const useStyles = makeStyles((theme) =>
     createStyles({
         homeSection: {
-            padding: '150px 0px',
+            padding: '250px 0px',
         },
         homeContainer: {
             [theme.breakpoints.up('xs')]: {
