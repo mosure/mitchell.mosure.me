@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import posed from 'react-pose';
 import { makeStyles, createStyles, Grid } from '@material-ui/core';
 
@@ -40,21 +40,17 @@ const Intro: React.FC = () => {
         complete: false,
     });
 
-    useEffect(() => {
-        const timer2 = setTimeout(() => setState({
+    const startTimer = () => {
+        setTimeout(() => setState({
             complete: true,
         }), 3500);
-
-        return () => {
-            clearTimeout(timer2);
-        };
-    }, []);
+    };
 
     return (
         <Zoom className={classes.ssrInit} pose={state.complete ? 'complete' : 'init'}>
             <Grid className={classes.container} container justify='center' alignItems='center'>
                 <Grid item>
-                    <LogoAnimated className={classes.logo}/>
+                    <LogoAnimated className={classes.logo} onLoad={startTimer}/>
                 </Grid>
             </Grid>
         </Zoom>
