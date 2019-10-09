@@ -20,6 +20,11 @@ const useStyles = makeStyles((theme) =>
         primaryText: {
             fill: theme.palette.text.hint,
         },
+        iconButtonNoHover: {
+            '&:hover': {
+                backgroundColor: 'transparent',
+            },
+        },
     }),
 );
 
@@ -41,10 +46,26 @@ const Footer: React.FC = () => {
                 </Typography>
             </Grid>
             <Grid item>
-                <IconButton size='small' href={globals.githubUrl} target='_blank' color='secondary'>
+                <IconButton
+                    size='small'
+                    disableFocusRipple
+                    disableRipple
+                    className={classes.iconButtonNoHover}
+                    href={globals.githubUrl}
+                    target='_blank'
+                    color='secondary'
+                >
                     <GitHubIcon className={classes.primaryText}/>
                 </IconButton>
-                <IconButton size='small' href={globals.linkedinUrl} target='_blank' color='secondary'>
+                <IconButton
+                    size='small'
+                    disableFocusRipple
+                    disableRipple
+                    className={classes.iconButtonNoHover}
+                    href={globals.linkedinUrl}
+                    target='_blank'
+                    color='secondary'
+                >
                     <LinkedInIcon className={classes.primaryText}/>
                 </IconButton>
             </Grid>

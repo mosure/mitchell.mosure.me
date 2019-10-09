@@ -5,6 +5,7 @@ import { Link } from 'react-scroll';
 
 import { HomeItem, homeItems } from '../home.db';
 import { DropFade } from '../../shared';
+import { Button } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) =>
     createStyles({
@@ -62,6 +63,17 @@ const HeaderWeb: React.FC = () => {
                     );
                 })
             }
+
+            <DropFade>
+                <Button
+                    target='_blank'
+                    href='mitchell.mosure.pdf'
+                    variant='outlined'
+                    color='secondary'
+                >
+                    Resume
+                </Button>
+            </DropFade>
         </Grid>
     );
 };

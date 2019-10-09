@@ -11,11 +11,11 @@ import {
     ListItem,
     List,
     Grid,
+    Button,
 } from '@material-ui/core';
 
 import { HomeItem, homeItems } from '../home.db';
-import { DrawerOpenClose, GitHubIcon, LinkedInIcon } from '../../shared';
-import { globals } from '../../data';
+import { DrawerOpenClose } from '../../shared';
 
 const useStyles = makeStyles((theme) =>
     createStyles({
@@ -93,12 +93,14 @@ const HeaderMobile: React.FC = () => {
                         <Divider/>
                         <ListItem>
                             <Grid container justify='center' alignItems='center'>
-                                <IconButton href={globals.githubUrl} target='_blank' color='secondary'>
-                                    <GitHubIcon className={classes.primaryText}/>
-                                </IconButton>
-                                <IconButton href={globals.linkedinUrl} target='_blank' color='secondary'>
-                                    <LinkedInIcon className={classes.primaryText}/>
-                                </IconButton>
+                                <Button
+                                    target='_blank'
+                                    href='mitchell.mosure.pdf'
+                                    variant='outlined'
+                                    color='secondary'
+                                >
+                                    Resume
+                                </Button>
                             </Grid>
                         </ListItem>
                     </List>

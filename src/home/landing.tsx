@@ -3,12 +3,12 @@ import {
     createStyles,
     Grid,
     makeStyles,
-    Button,
     Typography,
+    IconButton,
 } from '@material-ui/core';
 
 import { globals } from '../data';
-import { DropFade } from '../shared';
+import { DropFade, GitHubIcon } from '../shared';
 
 const useStyles = makeStyles((theme) =>
     createStyles({
@@ -38,6 +38,11 @@ const useStyles = makeStyles((theme) =>
         description: {
             marginBottom: 40,
             maxWidth: '450px',
+        },
+        iconButtonNoHover: {
+            '&:hover': {
+                backgroundColor: 'transparent',
+            },
         },
     }),
 );
@@ -88,15 +93,17 @@ const Landing: React.FC = () => {
                 <br/>
 
                 <DropFade>
-                    <Button
+                    <IconButton
+                        size='medium'
+                        disableFocusRipple
+                        disableRipple
+                        className={classes.iconButtonNoHover}
+                        href={globals.githubUrl}
                         target='_blank'
-                        href='mitchell.mosure.pdf'
-                        size='large'
-                        variant='outlined'
                         color='secondary'
                     >
-                        View Resume
-                    </Button>
+                        <GitHubIcon/>
+                    </IconButton>
                 </DropFade>
             </Grid>
         </Grid>
