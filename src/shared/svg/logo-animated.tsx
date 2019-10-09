@@ -33,7 +33,7 @@ export const LogoAnimated: React.FC<any> = (props: any) => {
                         id='circleIn'
                         attributeName='stroke-dashoffset'
                         begin='f2a.end - 1s'
-                        dur='1.5s'
+                        dur='1.25s'
                         fill='freeze'
                         calcMode='spline'
                         keyTimes='0; 1'
