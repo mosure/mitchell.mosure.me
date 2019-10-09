@@ -7,7 +7,7 @@ import { GitHubIcon, LinkedInIcon } from '../shared';
 const useStyles = makeStyles((theme) =>
     createStyles({
         footer: {
-            height: '96px',
+            height: '128px',
             backgroundColor: theme.palette.primary.dark,
         },
         consoleFont: {
@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) =>
             fontSize: '0.86rem',
         },
         iconContainer: {
-            paddingTop: '8px',
+            paddingBottom: '8px',
         },
         primaryText: {
             fill: theme.palette.text.hint,
@@ -41,33 +41,46 @@ const Footer: React.FC = () => {
             className={classes.footer}
         >
             <Grid item>
+                <Grid
+                    container
+                    spacing={1}
+                    justify='center'
+                    alignItems='center'
+                    className={classes.iconContainer}
+                >
+                    <Grid item>
+                        <IconButton
+                            size='small'
+                            disableFocusRipple
+                            disableRipple
+                            className={classes.iconButtonNoHover}
+                            href={globals.githubUrl}
+                            target='_blank'
+                            color='secondary'
+                        >
+                            <GitHubIcon className={classes.primaryText}/>
+                        </IconButton>
+                    </Grid>
+                    <Grid item>
+                        <IconButton
+                            size='small'
+                            disableFocusRipple
+                            disableRipple
+                            className={classes.iconButtonNoHover}
+                            href={globals.linkedinUrl}
+                            target='_blank'
+                            color='secondary'
+                        >
+                            <LinkedInIcon className={classes.primaryText}/>
+                        </IconButton>
+                    </Grid>
+                </Grid>
+            </Grid>
+
+            <Grid item>
                 <Typography className={classes.consoleFont} variant='body2'>
                     Built by {globals.firstName} {globals.lastName}
                 </Typography>
-            </Grid>
-            <Grid item>
-                <IconButton
-                    size='small'
-                    disableFocusRipple
-                    disableRipple
-                    className={classes.iconButtonNoHover}
-                    href={globals.githubUrl}
-                    target='_blank'
-                    color='secondary'
-                >
-                    <GitHubIcon className={classes.primaryText}/>
-                </IconButton>
-                <IconButton
-                    size='small'
-                    disableFocusRipple
-                    disableRipple
-                    className={classes.iconButtonNoHover}
-                    href={globals.linkedinUrl}
-                    target='_blank'
-                    color='secondary'
-                >
-                    <LinkedInIcon className={classes.primaryText}/>
-                </IconButton>
             </Grid>
         </Grid>
     );
