@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, makeStyles, createStyles, Typography, Link, IconButton } from '@material-ui/core';
+import { Grid, makeStyles, createStyles, Typography, IconButton } from '@material-ui/core';
 
 import { globals } from '../data';
 import { GitHubIcon, LinkedInIcon } from '../shared';
