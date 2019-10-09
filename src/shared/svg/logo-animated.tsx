@@ -46,12 +46,24 @@ export const LogoAnimated: React.FC<any> = (props: any) => {
                     fill={theme.palette.secondary.main}
                     cx='449.5'
                     cy='449.5'
-                    r='32'
+                    r='0'
                 >
+                    <animate
+                        id='cin'
+                        attributeName='r'
+                        begin='0.25s'
+                        dur='0.5s'
+                        fill='freeze'
+                        from='0'
+                        to='32'
+                        calcMode='spline'
+                        keyTimes='0; 1'
+                        keySplines='0.25, 0.1, 0.25, 1'
+                    />
                     <animate
                         id='cinit'
                         attributeName='fill-opacity'
-                        begin='0.5s'
+                        begin='cin.end'
                         dur='0.01s'
                         fill='freeze'
                         from='1'

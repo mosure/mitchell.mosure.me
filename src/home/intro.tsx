@@ -20,15 +20,7 @@ const useStyles = makeStyles(() =>
 );
 
 const Zoom = posed.div({
-    load: {
-        applyAtStart: { display: 'block' },
-        scale: 1,
-        transition: {
-            ease: 'easeIn',
-            duration: 300,
-        },
-    },
-    init: {
+    complete: {
         scale: 0,
         transition: {
             ease: 'easeOut',
@@ -36,26 +28,30 @@ const Zoom = posed.div({
         },
         applyAtEnd: { display: 'none' },
     },
+    init: {
+        applyAtEnd: { display: 'block' },
+    },
 });
 
 const Intro: React.FC = () => {
     const classes = useStyles();
 
-    const [loaded, setState] = useState(false);
+    const [state, setState] = useState({
+        complete: false,
+    });
 
     useEffect(() => {
-        const timer1 = setTimeout(() => setState(true), 200);
-
-        const timer2 = setTimeout(() => setState(false), 3500);
+        const timer2 = setTimeout(() => setState({
+            complete: true,
+        }), 3500);
 
         return () => {
-            clearTimeout(timer1);
             clearTimeout(timer2);
         };
     }, []);
 
     return (
-        <Zoom className={classes.ssrInit} pose={loaded ? 'load' : 'init'}>
+        <Zoom className={classes.ssrInit} pose={state.complete ? 'complete' : 'init'}>
             <Grid className={classes.container} container justify='center' alignItems='center'>
                 <Grid item>
                     <LogoAnimated className={classes.logo}/>
