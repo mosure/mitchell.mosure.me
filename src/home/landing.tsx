@@ -4,11 +4,11 @@ import {
     Grid,
     makeStyles,
     Typography,
-    IconButton,
+    Button,
 } from '@material-ui/core';
 
 import { globals } from '../data';
-import { DropFade, GitHubIcon } from '../shared';
+import { DropFade } from '../shared';
 
 const useStyles = makeStyles((theme) =>
     createStyles({
@@ -90,20 +90,15 @@ const Landing: React.FC = () => {
                     </div>
                 </DropFade>
 
-                <br/>
-
                 <DropFade>
-                    <IconButton
-                        size='medium'
-                        disableFocusRipple
-                        disableRipple
-                        className={classes.iconButtonNoHover}
-                        href={globals.githubUrl}
+                    <Button
                         target='_blank'
+                        href='mailto:mitchell@mosure.me?subject=Website Inquiry'
+                        variant='outlined'
                         color='secondary'
                     >
-                        <GitHubIcon/>
-                    </IconButton>
+                        Email Me
+                    </Button>
                 </DropFade>
             </Grid>
         </Grid>
