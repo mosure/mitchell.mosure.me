@@ -14,7 +14,8 @@ import { DisplayNone } from '../shared';
 const useStyles = makeStyles((theme) =>
     createStyles({
         homeSection: {
-            padding: '250px 0px',
+            paddingTop: '150px',
+            paddingBottom: '30%',
         },
         homeContainer: {
             [theme.breakpoints.up('xs')]: {
@@ -68,18 +69,10 @@ const Home: React.FC = () => {
                         homeItems.map((homeItem, index) => {
                             const Child = homeItem.content;
 
-                            let style = {};
-                            if (index === 0) {
-                                style = {
-                                    paddingTop: '0px',
-                                };
-                            }
-
                             return (
                                 <section
                                     id={homeItem.name || ''}
                                     key={index}
-                                    style={style}
                                     className={classes.homeSection}
                                 >
                                     <Child {...homeItem}/>
