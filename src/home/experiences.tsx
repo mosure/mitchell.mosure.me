@@ -12,18 +12,18 @@ const useStyles = makeStyles(() =>
             padding: '24px 0px',
         },
         position: {
-            fontSize: '1.5em',
+            fontSize: '1.25em',
             paddingBottom: '8px',
         },
         organization: {
             fontSize: '2em',
         },
         location: {
-            fontSize: '1.25em',
+            fontSize: '1.15em',
             paddingBottom: '16px',
         },
         description: {
-            paddingBottom: '24px',
+            paddingBottom: '16px',
         },
         descriptionItem: {
             display: 'flex',

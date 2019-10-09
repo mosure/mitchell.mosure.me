@@ -1,21 +1,29 @@
 import React, { useState } from 'react';
-import Grid from '@material-ui/core/Grid';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import IconButton from '@material-ui/core/IconButton';
-import Toolbar from '@material-ui/core/Toolbar';
-import Drawer from '@material-ui/core/Drawer';
-import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { scroller } from 'react-scroll';
+import {
+    Drawer,
+    Divider,
+    Toolbar,
+    IconButton,
+    ListItemText,
+    makeStyles,
+    createStyles,
+    ListItem,
+    List,
+    Grid,
+} from '@material-ui/core';
 
 import { HomeItem, homeItems } from '../home.db';
-import { DrawerOpenClose } from '../../shared';
+import { DrawerOpenClose, GitHubIcon, LinkedInIcon } from '../../shared';
+import { globals } from '../../data';
 
 const useStyles = makeStyles((theme) =>
     createStyles({
         fullList: {
             width: 'auto',
+        },
+        primaryText: {
+            fill: theme.palette.text.hint,
         },
     }),
 );
@@ -82,6 +90,17 @@ const HeaderMobile: React.FC = () => {
                                 );
                             })
                         }
+                        <Divider/>
+                        <ListItem>
+                            <Grid container justify='center' alignItems='center'>
+                                <IconButton href={globals.githubUrl} target='_blank' color='secondary'>
+                                    <GitHubIcon className={classes.primaryText}/>
+                                </IconButton>
+                                <IconButton href={globals.linkedinUrl} target='_blank' color='secondary'>
+                                    <LinkedInIcon className={classes.primaryText}/>
+                                </IconButton>
+                            </Grid>
+                        </ListItem>
                     </List>
                 </div>
             </Drawer>
