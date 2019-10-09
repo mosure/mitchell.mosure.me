@@ -10,9 +10,13 @@ import { Button } from '@material-ui/core';
 const useStyles = makeStyles((theme) =>
     createStyles({
         anchorItem: {
-            paddingLeft: 32,
-            paddingRight: 32,
+            paddingLeft: '24px',
+            paddingRight: '24px',
             cursor: 'pointer',
+        },
+        resumeItem: {
+            marginLeft: '24px',
+            marginRight: '24px',
         },
         anchorLink: {
             paddingTop: 8,
@@ -54,6 +58,8 @@ const HeaderAnchorButton: React.FC<HomeItem> = (props: HomeItem) => {
 };
 
 const HeaderWeb: React.FC = () => {
+    const classes = useStyles();
+
     return (
         <Grid container justify='flex-end' alignItems='center'>
             {
@@ -66,6 +72,7 @@ const HeaderWeb: React.FC = () => {
 
             <DropFade>
                 <Button
+                    className={classes.resumeItem}
                     target='_blank'
                     href='mitchell.mosure.pdf'
                     variant='outlined'
