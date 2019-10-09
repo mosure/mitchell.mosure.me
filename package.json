@@ -26,7 +26,6 @@
     "typescript": "3.6.3"
   },
   "devDependencies": {
-    "react-snap": "^1.23.0",
     "eslint": "^6.2.2",
     "tslint": "^5.19.0",
     "tslint-react": "^4.0.0"
@@ -34,7 +33,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'"
