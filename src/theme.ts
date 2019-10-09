@@ -20,6 +20,10 @@ const paletteTheme = createMuiTheme({
             secondary: 'rgba(0, 0, 0, 0.87)',
             hint: 'rgba(255, 255, 255, 0.60)',
         },
+        background: {
+            paper: '#61892F',
+            default: '#222629',
+        },
     },
 });
 
