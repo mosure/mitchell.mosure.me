@@ -13,9 +13,9 @@
       "sizes": "192x192"
     },
     {
-      "src": "android-chrome-512x512.png",
+      "src": "apple-touch-icon.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "180x180"
     }
   ],
   "start_url": ".",
