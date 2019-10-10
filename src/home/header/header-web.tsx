@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) =>
             '&:hover': {
                 color: theme.palette.secondary.main,
             },
+            userSelect: 'none',
         },
         anchorLinkActive: {
             color: theme.palette.secondary.main,
@@ -48,7 +49,7 @@ const HeaderAnchorButton: React.FC<HomeItem> = (props: HomeItem) => {
                             smooth='easeInOutCubic'
                             duration={500}
                         >
-                            {props.name}
+                            {props.name.toUpperCase()}
                         </Link>
                     </Grid>
                 </DropFade>
@@ -78,7 +79,7 @@ const HeaderWeb: React.FC = () => {
                     variant='outlined'
                     color='secondary'
                 >
-                    Resume
+                    RESUME
                 </Button>
             </DropFade>
         </Grid>

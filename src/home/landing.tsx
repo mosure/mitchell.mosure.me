@@ -19,11 +19,13 @@ const useStyles = makeStyles((theme) =>
         },
         greeting: {
             color: theme.palette.secondary.main,
-            marginBottom: 10,
+            marginBottom: 0,
+            userSelect: 'none',
         },
         name: {
             color: theme.palette.text.primary,
-            marginBottom: 15,
+            marginBottom: 0,
+            userSelect: 'none',
         },
         firstName: {
 
@@ -34,6 +36,7 @@ const useStyles = makeStyles((theme) =>
         statement: {
             color: theme.palette.text.hint,
             marginBottom: 36,
+            userSelect: 'none',
         },
         description: {
             marginBottom: 40,

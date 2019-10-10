@@ -47,7 +47,10 @@ const About: React.FC = () => {
                 <Grid item xs={12} sm={6}>
                     <div className={classes.textContainer}>
                         <Typography className={classes.aboutText} variant='body1'>
-                            Hello!
+                            I find most aspects of computing systems both interesting and fulfilling.
+                            Long term, I plan to advance artificial general intelligence research.
+                            Of the more widely used technologies, I enjoy working to solve machine learning,
+                            computer vision, and optimization problems.
                         </Typography>
 
                         <Typography className={classes.aboutText} variant='body1'>
@@ -57,7 +60,7 @@ const About: React.FC = () => {
                                 University of Wisconsin - Madison
                             </Link>
                             &nbsp;
-                            with a Bachelor's Degree in Computer Sciences and Mathematics.
+                            in the fall of 2019 with a Bachelor's Degree in Computer Sciences and Mathematics.
                         </Typography>
 
                         <Typography className={classes.aboutText} variant='body1'>

@@ -8,6 +8,9 @@ const useStyles = makeStyles(() =>
         container: {
             margin: '0px auto',
         },
+        noSelect: {
+            userSelect: 'none',
+        },
     }),
 );
 
@@ -22,9 +25,11 @@ export const HomeItemContainer: React.FC<HomeItemContainerProps> = (props) => {
 
     return (
         <div style={{maxWidth: props.maxWidth || '1000px'}} className={classes.container}>
-            <Typography variant='h4' className={inlineClass.inlinehr}>
-                {props.header}
-            </Typography>
+            <div className={classes.noSelect}>
+                <Typography variant='h4' className={inlineClass.inlinehr}>
+                    {props.header}
+                </Typography>
+            </div>
 
             {props.children}
         </div>
