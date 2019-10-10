@@ -39,7 +39,7 @@ class LogoAnimated extends Component<any & {onLoad: () => void}> {
                         cy='449.5'
                         r='417.5'
                         strokeDasharray='3700'
-                        strokeDashoffset='-3700'
+                        strokeDashoffset='4700'
                         transform='rotate(-90.1, 449.5, 449.5)'
                     >
                         <animate
@@ -51,8 +51,8 @@ class LogoAnimated extends Component<any & {onLoad: () => void}> {
                             calcMode='spline'
                             keyTimes='0; 1'
                             keySplines='0.25, 0.1, 0.25, 1'
-                            from='-3700'
-                            to='0'
+                            from='4700'
+                            to='7400'
                         />
                     </circle>
                     <circle
