@@ -13,7 +13,7 @@ const useStyles = makeStyles(() =>
         },
         position: {
             fontSize: '1.1em',
-            paddingBottom: '8px',
+            paddingBottom: '4px',
         },
         organization: {
             fontSize: '2em',
