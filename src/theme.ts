@@ -15,7 +15,7 @@ const paletteTheme = createMuiTheme({
             hint: 'rgba(255, 255, 255, 0.60)',
         },
         background: {
-            paper: '#222629',
+            paper: '#343B40',
             default: '#222629',
         },
     },

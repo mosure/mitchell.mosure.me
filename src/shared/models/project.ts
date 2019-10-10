@@ -3,7 +3,6 @@ import { ImageList } from './image';
 export interface Project {
     name: string;
     description?: string;
-    route?: string;
     period?: string;
     images?: ImageList;
     github?: string;

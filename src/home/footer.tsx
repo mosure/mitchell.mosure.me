@@ -19,10 +19,14 @@ const useStyles = makeStyles((theme) =>
         },
         primaryText: {
             fill: theme.palette.text.hint,
+            '&:hover': {
+                fill: theme.palette.secondary.main,
+            },
         },
         iconButtonNoHover: {
             '&:hover': {
                 backgroundColor: 'transparent',
+                color: theme.palette.secondary.main,
             },
         },
     }),
