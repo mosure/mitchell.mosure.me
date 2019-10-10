@@ -40,7 +40,7 @@ class LogoAnimated extends Component<any & {onLoad: () => void}> {
                         r='417.5'
                         strokeDasharray='3700'
                         strokeDashoffset='-3700'
-                        transform='rotate(-90, 449.5, 449.5)'
+                        transform='rotate(-90.1, 449.5, 449.5)'
                     >
                         <animate
                             id='circleIn'
