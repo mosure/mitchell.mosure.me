@@ -9,17 +9,18 @@ import { HomeItemContainer } from './home-item-container';
 const useStyles = makeStyles(() =>
     createStyles({
         experienceContainer: {
-            padding: '24px 0px',
+            padding: '48px 0px',
         },
         position: {
-            fontSize: '1.25em',
+            fontSize: '1.1em',
             paddingBottom: '8px',
         },
         organization: {
             fontSize: '2em',
+            paddingBottom: '4px',
         },
         location: {
-            fontSize: '1.15em',
+            fontSize: '1.1em',
             paddingBottom: '16px',
         },
         description: {
@@ -43,7 +44,7 @@ const ExperienceItem: React.FC<Experience> = (experience: Experience) => {
 
     return (
         <div className={classes.experienceContainer}>
-            <Grid container spacing={2} justify='center' alignItems='center'>
+            <Grid container spacing={3} justify='center' alignItems='center'>
                 <Grid sm={12} md={4} item>
                     <Grid container className={classes.imageContainer} justify='center' alignItems='center'>
                         <Grid item>

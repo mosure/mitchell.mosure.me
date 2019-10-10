@@ -35,7 +35,7 @@ export const ImageViewer: React.FC<Image & ImageViewerProps> = (props: Image & I
     const classes = useStyles();
 
     return (
-        <Box boxShadow={4}>
+        <Box boxShadow={props.shadow === undefined || props.shadow ? 4 : 0}>
             <HoverImage
                 className={[props.className, classes.defaultImage].join(' ')}
                 draggable={false}
