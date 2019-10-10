@@ -35,7 +35,7 @@ export const projects: ProjectList = [
         ],
     },
     {
-        name: 'Nano-SpeedTest',
+        name: 'Nano Speed Test',
         description: 'Nano cryptocurrency transfer speed test.',
         period: 'September 2018 - December 2018',
         github: 'https://github.com/silverstar194/Nano-SpeedTest',

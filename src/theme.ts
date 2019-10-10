@@ -13,6 +13,7 @@ const paletteTheme = createMuiTheme({
             primary: '#FFF',
             secondary: 'rgba(0, 0, 0, 0.87)',
             hint: 'rgba(255, 255, 255, 0.60)',
+            disabled: 'rgba(255, 255, 255, 0.40)',
         },
         background: {
             paper: '#343B40',
