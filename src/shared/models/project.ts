@@ -4,11 +4,11 @@ export interface Project {
     name: string;
     description?: string;
     route?: string;
-    startDate?: Date;                   // If left blank, render a 'not started yet'
-    endDate?: Date;                     // If left blank but contains startDate, render 'ongoing'
+    period?: string;
     images?: ImageList;
     github?: string;
     url?: string;
+    technologies?: string[];
 }
 
 export interface ProjectList extends Array<Project> {}
