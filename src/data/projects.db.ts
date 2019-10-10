@@ -12,4 +12,39 @@ export const projects: ProjectList = [
             'TypeScript',
         ],
     },
+    {
+        name: 'Lux',
+        description: 'Raspberry Pi LED strip music visualizer.',
+        period: 'August 2018 - October 2019',
+        github: 'https://github.com/Mosure/Lux',
+        technologies: [
+            'Python',
+            'C',
+        ],
+    },
+    {
+        name: 'Mix',
+        description: 'Raspberry Pi fridge drink mixing software.',
+        period: 'January 2019 - May 2019',
+        github: 'https://github.com/Mosure/Mix',
+        technologies: [
+            'Angular',
+            'TypeScript',
+            'Python',
+            'Django',
+        ],
+    },
+    {
+        name: 'Nano-SpeedTest',
+        description: 'Nano cryptocurrency transfer speed test.',
+        period: 'September 2018 - December 2018',
+        github: 'https://github.com/silverstar194/Nano-SpeedTest',
+        url: 'https://nanospeed.live/',
+        technologies: [
+            'Django',
+            'Python',
+            'React',
+            'SQL',
+        ],
+    },
 ];
