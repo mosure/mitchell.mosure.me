@@ -51,6 +51,7 @@ const Intro: React.FC = () => {
     };
 
     // "Browser support" (Edge/Firefox)
+    // TODO: This needs rework
     setTimeout(() => {
         setState({
             complete: true,
