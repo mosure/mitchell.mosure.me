@@ -2,6 +2,7 @@ import { ExperienceList } from '../shared';
 
 import * as ctech from '../assets/experiences/ctech.png';
 import * as madhacks from '../assets/experiences/madhacks.png';
+import * as sudo_x from '../assets/experiences/sudo_x.png';
 
 export const experiences: ExperienceList = [
     {
@@ -16,6 +17,22 @@ export const experiences: ExperienceList = [
         image: {
             alternateText: 'MadHacks Logo',
             path: madhacks.default,
+            shadow: false,
+        },
+    },
+    {
+        position: 'Founder',
+        organization: 'Sudo.X',
+        description: [
+            'A playground for software ideas.',
+            'Worked with many modern technologies such as AWS, TensorFlow, React, Angular, Node.js, and Python.',
+            'Worked with a small team exploring software solutions targetting the Transcend Madison competition.',
+        ],
+        location: 'Madison, Wisconsin',
+        period: 'April, 2017 - Present',
+        image: {
+            alternateText: 'Sudo.X Logo',
+            path: sudo_x.default,
             shadow: false,
         },
     },
