@@ -3,16 +3,32 @@ import { withTheme } from '@material-ui/core';
 
 class LogoAnimated extends Component<any & {onLoad: () => void}> {
     svgRef: RefObject<SVGSVGElement>;
+    hasFired: boolean;
 
     constructor(props: any) {
         super(props);
+
+        this.hasFired = false;
 
         this.svgRef = createRef();
     }
 
     componentDidMount() {
         if (this.svgRef.current) {
-            this.svgRef.current.onload = this.props.onLoad;
+            // Browser support
+            this.svgRef.current.onload = () => {
+                if (!this.hasFired) {
+                    this.hasFired = true;
+                    this.props.onLoad();
+                }
+            };
+
+            this.svgRef.current.addEventListener('load', () => {
+                if (!this.hasFired) {
+                    this.hasFired = true;
+                    this.props.onLoad();
+                }
+            });
         }
     }
 

@@ -38,22 +38,39 @@ const Intro: React.FC = () => {
 
     const [state, setState] = useState({
         complete: false,
+        hardComplete: false,
     });
 
     const startTimer = () => {
-        setTimeout(() => setState({
-            complete: true,
-        }), 3500);
+        setTimeout(() => {
+            setState({
+                complete: true,
+                hardComplete: false,
+            });
+        }, 3500);
     };
 
+    // "Browser support" (Edge/Firefox)
+    setTimeout(() => {
+        setState({
+            complete: true,
+            hardComplete: true,
+        });
+    }, 4000);
+
     return (
-        <Zoom className={classes.ssrInit} pose={state.complete ? 'complete' : 'init'}>
-            <Grid className={classes.container} container justify='center' alignItems='center'>
-                <Grid item>
-                    <LogoAnimated className={classes.logo} onLoad={startTimer}/>
-                </Grid>
-            </Grid>
-        </Zoom>
+        <>
+            {
+                !state.hardComplete &&
+                <Zoom className={classes.ssrInit} pose={state.complete ? 'complete' : 'init'}>
+                    <Grid className={classes.container} container justify='center' alignItems='center'>
+                        <Grid item>
+                            <LogoAnimated className={classes.logo} onLoad={startTimer}/>
+                        </Grid>
+                    </Grid>
+                </Zoom>
+            }
+        </>
     );
 };
 
