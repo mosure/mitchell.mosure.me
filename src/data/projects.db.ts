@@ -1,6 +1,18 @@
 import { ProjectList } from '../shared';
 
+import { sputterImages } from '../assets/projects';
+
 export const projects: ProjectList = [
+    {
+        name: 'Sputter Deposition',
+        description: 'DC Sputtering Magnetron',
+        period: 'September 2019 - Present',
+        technologies: [
+            'PVD',
+            'Vacuum System',
+        ],
+        images: sputterImages,
+    },
     {
         name: 'mitchell.mosure.me',
         description: 'Personal website version one.',

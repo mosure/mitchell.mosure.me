@@ -55,7 +55,7 @@ const Intro: React.FC = () => {
                 complete: true,
                 hardComplete: true,
             });
-        }, 4000);
+        }, 5000);
     }, []);
 
     return (

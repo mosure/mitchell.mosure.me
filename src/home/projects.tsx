@@ -10,7 +10,7 @@ import {
     IconButton,
     CardHeader,
 } from '@material-ui/core';
-import { OpenInNew } from '@material-ui/icons';
+import { OpenInNew, PhotoLibrary } from '@material-ui/icons';
 
 import { withFade, Project, GitHubIcon } from '../shared';
 import { HomeItemContainer } from './home-item-container';
@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) =>
     createStyles({
         card: {
             height: '100%',
+            minHeight: '300px',
             position: 'relative',
         },
         cardActions: {
@@ -64,6 +65,18 @@ const ProjectItem: React.FC<Project> = (project: Project) => {
                 <CardHeader
                     action={
                         <>
+                            {
+                                project.images &&
+                                <IconButton
+                                    size='small'
+                                    disableFocusRipple
+                                    disableRipple
+                                    className={classes.iconButtonNoHover}
+                                    color='secondary'
+                                >
+                                    <PhotoLibrary/>
+                                </IconButton>
+                            }
                             {
                                 project.url &&
                                 <IconButton
