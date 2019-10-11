@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import posed from 'react-pose';
 import { makeStyles, createStyles, Grid } from '@material-ui/core';
 
@@ -7,7 +7,7 @@ import { LogoAnimated } from '../shared';
 const useStyles = makeStyles(() =>
     createStyles({
         ssrInit: {
-            display: 'none',
+            display: 'block',
         },
         container: {
             height: '100vh',
@@ -28,9 +28,6 @@ const Zoom = posed.div({
         },
         applyAtEnd: { display: 'none' },
     },
-    init: {
-        applyAtEnd: { display: 'block' },
-    },
 });
 
 const Intro: React.FC = () => {
@@ -50,14 +47,16 @@ const Intro: React.FC = () => {
         }, 3500);
     };
 
-    // "Browser support" (Edge/Firefox)
-    // TODO: This needs rework
-    setTimeout(() => {
-        setState({
-            complete: true,
-            hardComplete: true,
-        });
-    }, 4000);
+    useEffect(() => {
+        // "Browser support" (Edge/Firefox)
+        // TODO: This needs rework
+        setTimeout(() => {
+            setState({
+                complete: true,
+                hardComplete: true,
+            });
+        }, 4000);
+    }, []);
 
     return (
         <>
