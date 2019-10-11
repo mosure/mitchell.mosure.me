@@ -4,11 +4,10 @@ import posed from 'react-pose';
 
 import { Image } from '../..';
 
-const useStyles = makeStyles((theme) =>
+const useStyles = makeStyles(() =>
     createStyles({
         defaultImage: {
             display: 'block',
-            borderRadius: '4px',
             maxWidth: '100%',
             maxHeight: '100%',
         },
@@ -38,6 +37,7 @@ export const ImageViewer: React.FC<Image & ImageViewerProps> = (props: Image & I
         <Box boxShadow={props.shadow === undefined || props.shadow ? 4 : 0}>
             <HoverImage
                 className={[props.className, classes.defaultImage].join(' ')}
+                style={{borderRadius: props.borderRadius === undefined || props.borderRadius ? '4px' : '0px'}}
                 draggable={false}
                 src={props.path}
                 alt={props.alternateText}
@@ -48,4 +48,5 @@ export const ImageViewer: React.FC<Image & ImageViewerProps> = (props: Image & I
 
 export interface ImageViewerProps {
     className?: string;
+    borderRadius?: boolean;
 }
