@@ -26,12 +26,12 @@ export const images: ImageList = [
         path: mykonos.default,
     },
     {
-        alternateText: 'Delos Wood Post',
-        path: wood_post.default,
-    },
-    {
         alternateText: 'Delos',
         path: delos.default,
         rows: 2,
+    },
+    {
+        alternateText: 'Delos Wood Post',
+        path: wood_post.default,
     },
 ];
