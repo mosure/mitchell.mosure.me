@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
 
             <Grid item>
                 <Typography className={classes.consoleFont} variant='body2'>
-                    Built by {globals.firstName} {globals.lastName}
+                    {globals.firstName} {globals.lastName}
                 </Typography>
             </Grid>
         </Grid>
