@@ -22,4 +22,5 @@ if (rootElement!.hasChildNodes()) {
     serviceWorker.register();
 } else {
     render(<App/>, rootElement);
+    serviceWorker.register();
 }
