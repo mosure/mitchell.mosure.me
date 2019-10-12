@@ -36,13 +36,21 @@ const Intro: React.FC = () => {
     const [state, setState] = useState({
         complete: false,
         hardComplete: false,
+        loadAccepted: false,
     });
 
     const startTimer = () => {
+        setState({
+            complete: false,
+            hardComplete: false,
+            loadAccepted: true,
+        });
+
         setTimeout(() => {
             setState({
                 complete: true,
                 hardComplete: false,
+                loadAccepted: true,
             });
         }, 3500);
     };
@@ -51,11 +59,14 @@ const Intro: React.FC = () => {
         // "Browser support" (Edge/Firefox)
         // TODO: This needs rework
         setTimeout(() => {
-            setState({
-                complete: true,
-                hardComplete: true,
-            });
-        }, 5000);
+            if (!state.loadAccepted) {
+                setState({
+                    complete: true,
+                    hardComplete: true,
+                    loadAccepted: true,
+                });
+            }
+        }, 4000);
     }, []);
 
     return (
