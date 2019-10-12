@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     makeStyles,
     createStyles,
@@ -11,6 +11,7 @@ import {
     CardHeader,
 } from '@material-ui/core';
 import { OpenInNew, PhotoLibrary } from '@material-ui/icons';
+import Carousel, { Modal, ModalGateway } from 'react-images';
 
 import { withFade, Project, GitHubIcon } from '../shared';
 import { HomeItemContainer } from './home-item-container';
@@ -58,6 +59,21 @@ const useStyles = makeStyles((theme) =>
 
 const ProjectItem: React.FC<Project> = (project: Project) => {
     const classes = useStyles();
+    const [state, setState] = useState({
+        modalOpen: false,
+    });
+
+    const openModal = () => {
+        setState({
+            modalOpen: true,
+        });
+    };
+
+    const closeModal = () => {
+        setState({
+            modalOpen: false,
+        });
+    };
 
     return (
         <Grid item xs={12} sm={6} lg={4}>
@@ -73,6 +89,7 @@ const ProjectItem: React.FC<Project> = (project: Project) => {
                                     disableRipple
                                     className={classes.iconButtonNoHover}
                                     color='secondary'
+                                    onClick={openModal}
                                 >
                                     <PhotoLibrary/>
                                 </IconButton>
@@ -144,6 +161,16 @@ const ProjectItem: React.FC<Project> = (project: Project) => {
                     </Grid>
                 </CardActions>
             </Card>
+
+            <ModalGateway>
+                {
+                    state.modalOpen ? (
+                        <Modal onClose={closeModal}>
+                            <Carousel views={project.images}/>
+                        </Modal>
+                    ) : null
+                }
+            </ModalGateway>
         </Grid>
     );
 };

@@ -9,29 +9,29 @@ import * as wood_post from '../assets/travel/wood_post.jpg';
 
 export const images: ImageList = [
     {
-        alternateText: 'Amsterdam',
-        path: amsterdam.default,
+        caption: 'Amsterdam',
+        src: amsterdam.default,
         rows: 2,
     },
     {
-        alternateText: 'Glacier',
-        path: glacier.default,
+        caption: 'Glacier',
+        src: glacier.default,
     },
     {
-        alternateText: 'Muenster',
-        path: muenster.default,
+        caption: 'Muenster',
+        src: muenster.default,
     },
     {
-        alternateText: 'Mykonos',
-        path: mykonos.default,
+        caption: 'Mykonos',
+        src: mykonos.default,
     },
     {
-        alternateText: 'Delos',
-        path: delos.default,
+        caption: 'Delos',
+        src: delos.default,
         rows: 2,
     },
     {
-        alternateText: 'Delos Wood Post',
-        path: wood_post.default,
+        caption: 'Delos Wood Post',
+        src: wood_post.default,
     },
 ];

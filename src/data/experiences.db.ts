@@ -15,8 +15,8 @@ export const experiences: ExperienceList = [
         period: 'October 19th - 20th, 2019',
         url: 'https://www.madhacks.io/',
         image: {
-            alternateText: 'MadHacks Logo',
-            path: madhacks.default,
+            caption: 'MadHacks Logo',
+            src: madhacks.default,
             shadow: false,
         },
     },
@@ -31,8 +31,8 @@ export const experiences: ExperienceList = [
         location: 'Madison, Wisconsin',
         period: 'April, 2017 - Present',
         image: {
-            alternateText: 'Sudo.X Logo',
-            path: sudo_x.default,
+            caption: 'Sudo.X Logo',
+            src: sudo_x.default,
             shadow: false,
         },
     },
@@ -47,8 +47,8 @@ export const experiences: ExperienceList = [
         period: 'September, 2014 - September, 2019',
         url: 'https://www.ctechmanufacturing.com/',
         image: {
-            alternateText: 'CTech Logo',
-            path: ctech.default,
+            caption: 'CTech Logo',
+            src: ctech.default,
         },
     },
 ];

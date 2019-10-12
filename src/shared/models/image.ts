@@ -1,6 +1,6 @@
 export interface Image {
-    alternateText?: string;
-    path: string;
+    caption?: string;
+    src: string;
     shadow?: boolean;
     columns?: number;
     rows?: number;

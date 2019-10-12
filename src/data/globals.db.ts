@@ -15,8 +15,8 @@ designing and building robust, high-quality technologies from silicon to web.
     githubUrl: 'https://github.com/Mosure',
     linkedinUrl: 'https://www.linkedin.com/in/mosure',
     image: {
-        path: me.default,
-        alternateText: 'Profile Image',
+        src: me.default,
+        caption: 'Profile Image',
     },
     toolkit: [
         'C#',

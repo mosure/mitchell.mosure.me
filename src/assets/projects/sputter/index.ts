@@ -5,11 +5,11 @@ import * as sputter1 from './1.jpg';
 
 export const sputterImages: ImageList = [
     {
-        alternateText: 'Chamber',
-        path: sputter0.default,
+        caption: 'Chamber',
+        src: sputter0.default,
     },
     {
-        alternateText: 'Setup',
-        path: sputter1.default,
+        caption: 'Setup',
+        src: sputter1.default,
     },
 ];

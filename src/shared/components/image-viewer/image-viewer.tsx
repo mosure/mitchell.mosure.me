@@ -33,14 +33,21 @@ const HoverImage = posed.img({
 export const ImageViewer: React.FC<Image & ImageViewerProps> = (props: Image & ImageViewerProps) => {
     const classes = useStyles();
 
+    const handleClick = () => {
+        if (props.onClick) {
+            props.onClick(props);
+        }
+    };
+
     return (
         <Box boxShadow={props.shadow === undefined || props.shadow ? 4 : 0}>
             <HoverImage
                 className={[props.className, classes.defaultImage].join(' ')}
                 style={{borderRadius: props.borderRadius === undefined || props.borderRadius ? '4px' : '0px'}}
                 draggable={false}
-                src={props.path}
-                alt={props.alternateText}
+                src={props.src}
+                alt={props.caption}
+                onClick={handleClick}
             />
         </Box>
     );
@@ -49,4 +56,5 @@ export const ImageViewer: React.FC<Image & ImageViewerProps> = (props: Image & I
 export interface ImageViewerProps {
     className?: string;
     borderRadius?: boolean;
+    onClick?: (image: Image) => void;
 }
