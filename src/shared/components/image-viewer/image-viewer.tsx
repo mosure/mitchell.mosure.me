@@ -35,7 +35,7 @@ export const ImageViewer: React.FC<Image & ImageViewerProps> = (props: Image & I
 
     const handleClick = () => {
         if (props.onClick) {
-            props.onClick(props);
+            props.onClick(props.src);
         }
     };
 
@@ -56,5 +56,5 @@ export const ImageViewer: React.FC<Image & ImageViewerProps> = (props: Image & I
 export interface ImageViewerProps {
     className?: string;
     borderRadius?: boolean;
-    onClick?: (image: Image) => void;
+    onClick?: (imageSource: string) => void;
 }

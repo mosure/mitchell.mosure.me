@@ -14,10 +14,10 @@ export const Images: React.FC<{ images: ImageList }> = (props: { images: ImageLi
         imageIndex: 0,
     });
 
-    const openModal = (image: Image) => {
+    const openModal = (imageSource: string) => {
         setState({
             modalOpen: true,
-            imageIndex: props.images.indexOf(image),
+            imageIndex: props.images.findIndex((toCheck: Image) => toCheck.src === imageSource),
         });
     };
 

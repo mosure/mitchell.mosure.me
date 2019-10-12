@@ -75,6 +75,7 @@ const ProjectItem: React.FC<Project> = (project: Project) => {
         });
     };
 
+
     return (
         <Grid item xs={12} sm={6} lg={4}>
             <Card className={classes.card}>
