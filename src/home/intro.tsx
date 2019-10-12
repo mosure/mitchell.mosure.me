@@ -37,37 +37,50 @@ const Intro: React.FC = () => {
         complete: false,
         hardComplete: false,
         loadAccepted: false,
+        failover: false,
     });
 
     const startTimer = () => {
         setState({
-            complete: false,
-            hardComplete: false,
+            complete: state.complete,
+            hardComplete: state.hardComplete,
             loadAccepted: true,
+            failover: state.failover,
         });
 
         setTimeout(() => {
             setState({
                 complete: true,
-                hardComplete: false,
-                loadAccepted: true,
+                hardComplete: state.hardComplete,
+                loadAccepted: state.loadAccepted,
+                failover: state.failover,
             });
         }, 3500);
     };
 
     useEffect(() => {
-        // "Browser support" (Edge/Firefox)
-        // TODO: This needs rework
-        setTimeout(() => {
-            if (!state.loadAccepted) {
-                setState({
-                    complete: true,
-                    hardComplete: true,
-                    loadAccepted: true,
-                });
-            }
-        }, 4000);
-    }, []);
+        if (!state.failover) {
+            setState({
+                complete: state.complete,
+                hardComplete: state.hardComplete,
+                loadAccepted: state.loadAccepted,
+                failover: true,
+            });
+
+            // "Browser support" (Edge/Firefox)
+            // TODO: This needs rework
+            setTimeout(() => {
+                if (!state.loadAccepted) {
+                    setState({
+                        complete: state.complete,
+                        hardComplete: true,
+                        loadAccepted: state.loadAccepted,
+                        failover: state.failover,
+                    });
+                }
+            }, 4000);
+        }
+    }, [state]);
 
     return (
         <>

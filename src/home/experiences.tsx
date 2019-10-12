@@ -36,6 +36,10 @@ const useStyles = makeStyles(() =>
             width: '100%',
             height: '100%',
         },
+        image: {
+            maxWidth: '300px',
+            maxHeight: '250px',
+        },
     }),
 );
 
@@ -48,7 +52,7 @@ const ExperienceItem: React.FC<Experience> = (experience: Experience) => {
                 <Grid xs={12} md={4} item>
                     <Grid container className={classes.imageContainer} justify='center' alignItems='center'>
                         <Grid item>
-                            <ImageViewer {...experience.image}/>
+                            <ImageViewer className={classes.image} {...experience.image}/>
                         </Grid>
                     </Grid>
                 </Grid>

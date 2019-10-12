@@ -3,6 +3,7 @@ import { ExperienceList } from '../shared';
 import * as ctech from '../assets/experiences/ctech.png';
 import * as madhacks from '../assets/experiences/madhacks.png';
 import * as sudo_x from '../assets/experiences/sudo_x.png';
+import * as uw from '../assets/experiences/uw.png';
 
 export const experiences: ExperienceList = [
     {
@@ -33,6 +34,20 @@ export const experiences: ExperienceList = [
         image: {
             caption: 'Sudo.X Logo',
             src: sudo_x.default,
+            shadow: false,
+        },
+    },
+    {
+        position: 'Student',
+        organization: 'University of Wisconsin - Madison',
+        description: [
+            'B.S. in Computer Science and Mathematics',
+        ],
+        location: 'Madison, Wisconsin',
+        period: 'September, 2016 - December, 2019',
+        image: {
+            caption: 'UW - Madison Logo',
+            src: uw.default,
             shadow: false,
         },
     },
