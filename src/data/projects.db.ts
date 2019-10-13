@@ -1,6 +1,6 @@
 import { ProjectList } from '../shared';
 
-import { sputterImages } from '../assets/projects';
+import { mixImages, sputterImages } from '../assets/projects';
 
 export const projects: ProjectList = [
     {
@@ -45,6 +45,7 @@ export const projects: ProjectList = [
             'Python',
             'Django',
         ],
+        images: mixImages,
     },
     {
         name: 'Nano Speed Test',

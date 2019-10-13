@@ -9,24 +9,24 @@ import * as wood_post from '../assets/travel/wood_post.jpg';
 
 export const images: ImageList = [
     {
-        caption: 'Amsterdam',
+        caption: 'Amsterdam, Netherlands',
         src: amsterdam.default,
         rows: 2,
     },
     {
-        caption: 'Glacier',
+        caption: 'Logan\'s Pass - Glacier National Park',
         src: glacier.default,
     },
     {
-        caption: 'Muenster',
+        caption: 'Muenster, Germany',
         src: muenster.default,
     },
     {
-        caption: 'Mykonos',
+        caption: 'Mykonos, Greece',
         src: mykonos.default,
     },
     {
-        caption: 'Delos',
+        caption: 'Delos, Greece',
         src: delos.default,
         rows: 2,
     },

@@ -48,6 +48,7 @@ export const ImageViewer: React.FC<Image & ImageViewerProps> = (props: Image & I
                 src={props.src}
                 alt={props.caption}
                 onClick={handleClick}
+                async
             />
         </Box>
     );
