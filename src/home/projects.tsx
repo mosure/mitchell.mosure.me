@@ -27,6 +27,7 @@ const useStyles = makeStyles((theme) =>
         cardActions: {
             position: 'absolute',
             bottom: '0px',
+            width: '100%',
         },
         cardContent: {
             paddingBottom: '96px',
@@ -49,6 +50,7 @@ const useStyles = makeStyles((theme) =>
         },
         technologyContainer: {
             padding: '24px 8px',
+            width: '100%',
         },
         technology: {
             fontSize: '1em',
