@@ -33,7 +33,7 @@ export const Images: React.FC<{ images: ImageList }> = (props: { images: ImageLi
             {
                 props.images.map((image, index) => {
                     return (
-                        <GridListTile key={index} cols={image.columns || 1} rows={image.rows || 2}>
+                        <GridListTile key={index} cols={image.columns || 1} rows={image.rows || 1}>
                             <ImageViewer
                                 {...image}
                                 shadow={false}

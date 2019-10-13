@@ -11,7 +11,6 @@ export const images: ImageList = [
     {
         caption: 'Amsterdam, Netherlands',
         src: amsterdam.default,
-        rows: 2,
     },
     {
         caption: 'Logan\'s Pass - Glacier National Park',
@@ -28,7 +27,6 @@ export const images: ImageList = [
     {
         caption: 'Delos, Greece',
         src: delos.default,
-        rows: 2,
     },
     {
         caption: 'Delos Wood Post',
