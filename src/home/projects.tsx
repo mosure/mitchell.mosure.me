@@ -75,6 +75,21 @@ const ProjectItem: React.FC<Project> = (project: Project) => {
         });
     };
 
+    const modalStyles = {
+        blanket: (base: any) => ({
+            ...base,
+            zIndex: 3001,
+        }),
+        dialog: (base: any) => ({
+            ...base,
+            zIndex: 3000,
+        }),
+        positioner: (base: any) => ({
+            ...base,
+            zIndex: 3001,
+        }),
+    };
+
     return (
         <Grid item xs={12} sm={6} lg={4}>
             <Card className={classes.card}>
@@ -165,7 +180,7 @@ const ProjectItem: React.FC<Project> = (project: Project) => {
             <ModalGateway>
                 {
                     state.modalOpen ? (
-                        <Modal onClose={closeModal}>
+                        <Modal onClose={closeModal} styles={modalStyles}>
                             <Carousel views={project.images}/>
                         </Modal>
                     ) : null

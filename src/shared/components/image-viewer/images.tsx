@@ -28,6 +28,21 @@ export const Images: React.FC<{ images: ImageList }> = (props: { images: ImageLi
         });
     };
 
+    const modalStyles = {
+        blanket: (base: any) => ({
+            ...base,
+            zIndex: 3001,
+        }),
+        dialog: (base: any) => ({
+            ...base,
+            zIndex: 3000,
+        }),
+        positioner: (base: any) => ({
+            ...base,
+            zIndex: 3001,
+        }),
+    };
+
     return (
         <GridList cellHeight='auto' cols={3} spacing={1}>
             {
@@ -47,7 +62,7 @@ export const Images: React.FC<{ images: ImageList }> = (props: { images: ImageLi
             <ModalGateway>
                 {
                     state.modalOpen ? (
-                        <Modal onClose={closeModal}>
+                        <Modal onClose={closeModal} styles={modalStyles}>
                             <Carousel views={props.images} currentIndex={state.imageIndex}/>
                         </Modal>
                     ) : null
