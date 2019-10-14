@@ -5,7 +5,7 @@ import { mixImages, sputterImages } from '../assets/projects';
 export const projects: ProjectList = [
     {
         name: 'Sputter Deposition',
-        description: 'DC Sputtering Magnetron',
+        description: 'DC Sputtering Magnetron. Planning to create gold mirrored sunglasses.',
         period: 'September 2019 - Present',
         technologies: [
             'PVD',
@@ -15,7 +15,7 @@ export const projects: ProjectList = [
     },
     {
         name: 'mitchell.mosure.me',
-        description: 'Personal website version one.',
+        description: 'Personal website version one. Built with React and TypeScript. Uses an AWS CodePipeline to deploy to AWS CloudFront.',
         period: 'October 2019',
         github: 'https://github.com/Mosure/mitchell.mosure.me',
         url: 'https://mitchell.mosure.me',
@@ -26,7 +26,7 @@ export const projects: ProjectList = [
     },
     {
         name: 'Lux',
-        description: 'Raspberry Pi LED strip music visualizer.',
+        description: 'Raspberry Pi LED strip music visualizer. Uses FFT and different rendering techniques to deliver a unique audio/visual experience.',
         period: 'August 2018 - October 2019',
         github: 'https://github.com/Mosure/Lux',
         technologies: [
@@ -36,7 +36,7 @@ export const projects: ProjectList = [
     },
     {
         name: 'Mix',
-        description: 'Raspberry Pi fridge drink mixing software.',
+        description: 'Raspberry Pi fridge drink mixing software. Developed UI and simple REST connected pump controller.',
         period: 'January 2019 - May 2019',
         github: 'https://github.com/Mosure/Mix',
         technologies: [
@@ -49,7 +49,7 @@ export const projects: ProjectList = [
     },
     {
         name: 'Nano Speed Test',
-        description: 'Nano cryptocurrency transfer speed test.',
+        description: 'Nano cryptocurrency transfer speed test. I worked primarily on the distributed proof of work service alongside the SQL Django models but also assisted in backend REST development and unit testing.',
         period: 'September 2018 - December 2018',
         github: 'https://github.com/silverstar194/Nano-SpeedTest',
         url: 'https://nanospeed.live/',
