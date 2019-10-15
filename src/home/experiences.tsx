@@ -100,7 +100,7 @@ const ExperienceItem: React.FC<Experience> = (experience: Experience) => {
 
 const Experiences: React.FC = () => {
     return (
-        <HomeItemContainer header='Experiences'>
+        <HomeItemContainer header='Experience'>
             {
                 experiences.map((experience, index) => {
                     return (
