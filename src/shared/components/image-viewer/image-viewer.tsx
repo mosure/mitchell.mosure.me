@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles, createStyles, Box } from '@material-ui/core';
 import posed from 'react-pose';
+import ReactGA from 'react-ga';
 
 import { Image } from '../..';
 
@@ -37,6 +38,16 @@ export const ImageViewer: React.FC<Image & ImageViewerProps> = (props: Image & I
         if (props.onClick) {
             props.onClick(props.src);
         }
+
+        logImageClick();
+    };
+
+    const logImageClick = () => {
+        ReactGA.event({
+            category: 'Image',
+            action: 'Clicked',
+            label: props.caption,
+        });
     };
 
     return (
