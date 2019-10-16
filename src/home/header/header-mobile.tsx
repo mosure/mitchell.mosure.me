@@ -43,8 +43,9 @@ const HeaderButton: React.FC<HomeItem & { doClose: () => void }> = (props: HomeI
 
     const logAnchorNav = () => {
         ReactGA.event({
-            category: 'Actions',
-            action: 'Mobile - Anchor: ' + props.name,
+            category: 'Button',
+            action: 'Anchor: ' + props.name,
+            label: 'Mobile',
         });
     };
 

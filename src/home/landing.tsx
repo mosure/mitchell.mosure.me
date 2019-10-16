@@ -56,8 +56,9 @@ const Landing: React.FC = () => {
 
     const logEmailClicked = () => {
         ReactGA.event({
-            category: 'Actions',
-            action: 'Landing - Email Me',
+            category: 'Button',
+            action: 'Email Me',
+            label: 'Landing',
         });
     };
 

@@ -22,8 +22,9 @@ const Contact: React.FC = () => {
 
     const logContactEmail = () => {
         ReactGA.event({
-            category: 'Actions',
-            action: 'Contact - Email Me',
+            category: 'Button',
+            action: 'Email Me',
+            label: 'Contact',
         });
     };
 

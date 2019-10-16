@@ -97,22 +97,25 @@ const ProjectItem: React.FC<Project> = (project: Project) => {
 
     const logProjectGithubOpen = () => {
         ReactGA.event({
-            category: 'Actions',
-            action: 'Project GitHub: ' + project.name,
+            category: 'Button',
+            action: 'GitHub',
+            label: project.name,
         });
     };
 
     const logProjectLinkOpen = () => {
         ReactGA.event({
-            category: 'Actions',
-            action: 'Project Link: ' + project.name,
+            category: 'Button',
+            action: 'Link',
+            label: project.name,
         });
     };
 
     const logProjectImagesOpen = () => {
         ReactGA.event({
-            category: 'Actions',
-            action: 'Project Images: ' + project.name,
+            category: 'Button',
+            action: 'Images',
+            label: project.name,
         });
     };
 

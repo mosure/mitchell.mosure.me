@@ -38,8 +38,9 @@ const HeaderAnchorButton: React.FC<HomeItem> = (props: HomeItem) => {
 
     const logAnchorNav = () => {
         ReactGA.event({
-            category: 'Actions',
-            action: 'Web - Anchor: ' + props.name,
+            category: 'Button',
+            action: 'Anchor: ' + props.name,
+            label: 'Web',
         });
     };
 
@@ -72,8 +73,9 @@ const HeaderWeb: React.FC = () => {
 
     const logResumeClick = () => {
         ReactGA.event({
-            category: 'Actions',
-            action: 'Web - Opened Resume',
+            category: 'Button',
+            action: 'Opened Resume',
+            label: 'Web',
         });
     };
 

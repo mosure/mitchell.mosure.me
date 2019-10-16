@@ -49,8 +49,8 @@ const ExperienceItem: React.FC<Experience> = (experience: Experience) => {
 
     const logExperienceClick = () => {
         ReactGA.event({
-            category: 'Actions',
-            action: 'Experience Open: ' + experience.organization,
+            category: 'Link',
+            action: 'Experience: ' + experience.organization,
         });
     };
 

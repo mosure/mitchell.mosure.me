@@ -38,15 +38,17 @@ const Footer: React.FC = () => {
 
     const logGitHubClick = () => {
         ReactGA.event({
-            category: 'Actions',
-            action: 'Footer - GitHub Open',
+            category: 'Button',
+            action: 'GitHub Open',
+            label: 'Footer',
         });
     };
 
     const logLinkedinClick = () => {
         ReactGA.event({
-            category: 'Actions',
-            action: 'Footer - LinkedIn Open',
+            category: 'Button',
+            action: 'LinkedIn Open',
+            label: 'Footer',
         });
     };
 
