@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles, createStyles, Typography, Grid, Link } from '@material-ui/core';
 import { ArrowRightOutlined } from '@material-ui/icons';
+import ReactGA from 'react-ga';
 
 import { experiences } from '../data';
 import { Experience, withFade, ImageViewer } from '../shared';
@@ -46,6 +47,13 @@ const useStyles = makeStyles(() =>
 const ExperienceItem: React.FC<Experience> = (experience: Experience) => {
     const classes = useStyles();
 
+    const logExperienceClick = () => {
+        ReactGA.event({
+            category: 'Actions',
+            action: 'Experience Open: ' + experience.organization,
+        });
+    };
+
     return (
         <div className={classes.experienceContainer}>
             <Grid container spacing={3} justify='center' alignItems='center'>
@@ -58,7 +66,7 @@ const ExperienceItem: React.FC<Experience> = (experience: Experience) => {
                 </Grid>
 
                 <Grid xs={12} md={8} item>
-                    <Link color='secondary' href={experience.url} target='_blank'>
+                    <Link color='secondary' href={experience.url} target='_blank' onClick={logExperienceClick}>
                         <Typography variant='h1' className={classes.organization}>
                             {experience.organization}
                         </Typography>

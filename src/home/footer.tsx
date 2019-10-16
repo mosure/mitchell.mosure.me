@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, makeStyles, createStyles, Typography, IconButton } from '@material-ui/core';
+import ReactGA from 'react-ga';
 
 import { globals } from '../data';
 import { GitHubIcon, LinkedInIcon } from '../shared';
@@ -35,6 +36,20 @@ const useStyles = makeStyles((theme) =>
 const Footer: React.FC = () => {
     const classes = useStyles();
 
+    const logGitHubClick = () => {
+        ReactGA.event({
+            category: 'Actions',
+            action: 'Footer - GitHub Open',
+        });
+    };
+
+    const logLinkedinClick = () => {
+        ReactGA.event({
+            category: 'Actions',
+            action: 'Footer - LinkedIn Open',
+        });
+    };
+
     return (
         <Grid
             container
@@ -61,6 +76,7 @@ const Footer: React.FC = () => {
                             href={globals.githubUrl}
                             target='_blank'
                             color='secondary'
+                            onClick={logGitHubClick}
                         >
                             <GitHubIcon className={classes.primaryText}/>
                         </IconButton>
@@ -74,6 +90,7 @@ const Footer: React.FC = () => {
                             href={globals.linkedinUrl}
                             target='_blank'
                             color='secondary'
+                            onClick={logLinkedinClick}
                         >
                             <LinkedInIcon className={classes.primaryText}/>
                         </IconButton>

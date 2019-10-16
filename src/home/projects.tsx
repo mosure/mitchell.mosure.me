@@ -12,6 +12,7 @@ import {
 } from '@material-ui/core';
 import { OpenInNew, PhotoLibrary } from '@material-ui/icons';
 import Carousel, { Modal, ModalGateway } from 'react-images';
+import ReactGA from 'react-ga';
 
 import { withFade, Project, GitHubIcon } from '../shared';
 import { HomeItemContainer } from './home-item-container';
@@ -69,6 +70,8 @@ const ProjectItem: React.FC<Project> = (project: Project) => {
         setState({
             modalOpen: true,
         });
+
+        logProjectImagesOpen();
     };
 
     const closeModal = () => {
@@ -90,6 +93,27 @@ const ProjectItem: React.FC<Project> = (project: Project) => {
             ...base,
             zIndex: 3001,
         }),
+    };
+
+    const logProjectGithubOpen = () => {
+        ReactGA.event({
+            category: 'Actions',
+            action: 'Project GitHub: ' + project.name,
+        });
+    };
+
+    const logProjectLinkOpen = () => {
+        ReactGA.event({
+            category: 'Actions',
+            action: 'Project Link: ' + project.name,
+        });
+    };
+
+    const logProjectImagesOpen = () => {
+        ReactGA.event({
+            category: 'Actions',
+            action: 'Project Images: ' + project.name,
+        });
     };
 
     return (
@@ -121,6 +145,7 @@ const ProjectItem: React.FC<Project> = (project: Project) => {
                                     disableRipple
                                     className={classes.iconButtonNoHover}
                                     color='secondary'
+                                    onClick={logProjectLinkOpen}
                                 >
                                     <OpenInNew/>
                                 </IconButton>
@@ -135,6 +160,7 @@ const ProjectItem: React.FC<Project> = (project: Project) => {
                                     disableRipple
                                     className={classes.iconButtonNoHover}
                                     color='secondary'
+                                    onClick={logProjectGithubOpen}
                                 >
                                     <GitHubIcon/>
                                 </IconButton>

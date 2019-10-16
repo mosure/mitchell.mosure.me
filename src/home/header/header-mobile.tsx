@@ -13,6 +13,7 @@ import {
     Grid,
     Button,
 } from '@material-ui/core';
+import ReactGA from 'react-ga';
 
 import { HomeItem, homeItems } from '../home.db';
 import { DrawerOpenClose } from '../../shared';
@@ -36,6 +37,15 @@ const HeaderButton: React.FC<HomeItem & { doClose: () => void }> = (props: HomeI
         });
 
         props.doClose();
+
+        logAnchorNav();
+    };
+
+    const logAnchorNav = () => {
+        ReactGA.event({
+            category: 'Actions',
+            action: 'Mobile - Anchor: ' + props.name,
+        });
     };
 
     return (
@@ -58,10 +68,25 @@ const HeaderMobile: React.FC = () => {
 
     const toggleDrawer = () => {
         setDrawer(!drawerOpen);
+        logDrawerToggle();
     };
 
     const closeDrawer = () => {
         setDrawer(false);
+    };
+
+    const logResumeClick = () => {
+        ReactGA.event({
+            category: 'Actions',
+            action: 'Web - Opened Resume',
+        });
+    };
+
+    const logDrawerToggle = () => {
+        ReactGA.event({
+            category: 'Actions',
+            action: 'Mobile - Header drawer toggle',
+        });
     };
 
     return (
@@ -98,6 +123,7 @@ const HeaderMobile: React.FC = () => {
                                     href='mitchell.mosure.pdf'
                                     variant='outlined'
                                     color='secondary'
+                                    onClick={logResumeClick}
                                 >
                                     Resume
                                 </Button>

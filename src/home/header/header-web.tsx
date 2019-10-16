@@ -2,6 +2,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { Link } from 'react-scroll';
+import ReactGA from 'react-ga';
 
 import { HomeItem, homeItems } from '../home.db';
 import { DropFade } from '../../shared';
@@ -35,6 +36,13 @@ const useStyles = makeStyles((theme) =>
 const HeaderAnchorButton: React.FC<HomeItem> = (props: HomeItem) => {
     const classes = useStyles();
 
+    const logAnchorNav = () => {
+        ReactGA.event({
+            category: 'Actions',
+            action: 'Web - Anchor: ' + props.name,
+        });
+    };
+
     return (
         <>
             {
@@ -45,6 +53,7 @@ const HeaderAnchorButton: React.FC<HomeItem> = (props: HomeItem) => {
                             className={classes.anchorLink}
                             activeClass={classes.anchorLinkActive}
                             to={props.name}
+                            onClick={logAnchorNav}
                             spy
                             smooth='easeInOutCubic'
                             duration={500}
@@ -60,6 +69,13 @@ const HeaderAnchorButton: React.FC<HomeItem> = (props: HomeItem) => {
 
 const HeaderWeb: React.FC = () => {
     const classes = useStyles();
+
+    const logResumeClick = () => {
+        ReactGA.event({
+            category: 'Actions',
+            action: 'Web - Opened Resume',
+        });
+    };
 
     return (
         <Grid container justify='flex-end' alignItems='center'>
@@ -78,6 +94,7 @@ const HeaderWeb: React.FC = () => {
                     href='mitchell.mosure.pdf'
                     variant='outlined'
                     color='secondary'
+                    onClick={logResumeClick}
                 >
                     RESUME
                 </Button>

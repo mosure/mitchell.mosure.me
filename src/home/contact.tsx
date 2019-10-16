@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography, makeStyles, createStyles, Link, Button } from '@material-ui/core';
+import ReactGA from 'react-ga';
 
 import { withFade } from '../shared';
 import { HomeItemContainer } from './home-item-container';
@@ -18,6 +19,13 @@ const useStyles = makeStyles((theme) =>
 
 const Contact: React.FC = () => {
     const classes = useStyles();
+
+    const logContactEmail = () => {
+        ReactGA.event({
+            category: 'Actions',
+            action: 'Contact - Email Me',
+        });
+    };
 
     return (
         <HomeItemContainer header='Contact Me' maxWidth={'500px'}>
@@ -41,6 +49,7 @@ const Contact: React.FC = () => {
                 variant='outlined'
                 color='secondary'
                 className={classes.buttonOffset}
+                onClick={logContactEmail}
             >
                 Email Me
             </Button>

@@ -6,6 +6,7 @@ import {
     Typography,
     Button,
 } from '@material-ui/core';
+import ReactGA from 'react-ga';
 
 import { globals } from '../data';
 import { DropFade } from '../shared';
@@ -53,6 +54,13 @@ const useStyles = makeStyles((theme) =>
 const Landing: React.FC = () => {
     const classes = useStyles();
 
+    const logEmailClicked = () => {
+        ReactGA.event({
+            category: 'Actions',
+            action: 'Landing - Email Me',
+        });
+    };
+
     return (
         <Grid
             container
@@ -99,6 +107,7 @@ const Landing: React.FC = () => {
                         href='mailto:mitchell@mosure.me?subject=Website Inquiry'
                         variant='outlined'
                         color='secondary'
+                        onClick={logEmailClicked}
                     >
                         Email Me
                     </Button>
