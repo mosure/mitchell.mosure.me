@@ -7,4 +7,4 @@ Built using [React](https://reactjs.org/) and hosted on [AWS CloudFront](https:/
 
 ---
 
-<sub>Design inspiration from (Brittany Chiang)[https://brittanychiang.com/] and (Gary Sheng)[http://www.garysheng.com/]</sub>
+<sub>Design inspiration from <a href="https://brittanychiang.com/">Brittany Chiang</a> and <a href="http://www.garysheng.com/">Gary Sheng</a></sub>
