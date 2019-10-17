@@ -9,6 +9,7 @@ import {
     Hidden,
     useScrollTrigger,
 } from '@material-ui/core';
+import ReactGA from 'react-ga';
 
 import HeaderMobile from './header-mobile';
 import HeaderWeb from './header-web';
@@ -46,6 +47,15 @@ const scrollToTop = () => {
     animateScroll.scrollToTop({
         duration: 500,
         smooth: 'easeInOutCubic',
+    });
+
+    logLogoClick();
+};
+
+const logLogoClick = () => {
+    ReactGA.event({
+        category: 'Button',
+        action: 'Logo',
     });
 };
 
