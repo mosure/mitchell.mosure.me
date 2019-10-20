@@ -1,8 +1,24 @@
 import { ProjectList } from '../shared';
 
-import { mixImages, sputterImages } from '../assets/projects';
+import { mixImages, sputterImages, garboScoreImages } from '../assets/projects';
 
 export const projects: ProjectList = [
+    {
+        name: 'GarboScore',
+        description: 'MadHacks - Carbon 2019 Hackathon Submission',
+        period: 'October 19th - 20th, 2019',
+        technologies: [
+            'React',
+            'GCP',
+            'Firebase',
+            'AutoML',
+            'MongoDB',
+            'TypeScript',
+        ],
+        github: 'https://github.com/Mosure/GarboScore',
+        url: 'https://garboscore.tech',
+        images: garboScoreImages,
+    },
     {
         name: 'Sputter Deposition',
         description: 'DC Sputtering Magnetron. Planning to create gold mirrored sunglasses.',

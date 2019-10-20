@@ -10,7 +10,9 @@ export const experiences: ExperienceList = [
         position: 'Software Engineer',
         organization: 'MadHacks - Carbon',
         description: [
-            'Developed software pertaining to sustainability. Note: This experience is a stub.',
+            'Developed software pertaining to sustainability.',
+            'Developed a full cloud app in less than 24 hours.',
+            'Worked in a team of two.',
         ],
         location: 'Madison, Wisconsin',
         period: 'October 19th - 20th, 2019',
