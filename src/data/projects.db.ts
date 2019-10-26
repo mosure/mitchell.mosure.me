@@ -49,6 +49,7 @@ export const projects: ProjectList = [
             'Python',
             'C',
         ],
+        url: 'https://youtu.be/lQLU-blq2bU',
     },
     {
         name: 'Mix',
