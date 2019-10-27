@@ -55,11 +55,11 @@ const About: React.FC = () => {
 
                         <Typography className={classes.aboutText} variant='body1'>
                             I will be graduating from the
-                            &nbsp;
+                            {' '}
                             <Link color='secondary' href='https://www.wisc.edu/' target='_blank'>
                                 University of Wisconsin - Madison
                             </Link>
-                            &nbsp;
+                            {' '}
                             in the fall of 2019 with a Bachelor's Degree in Computer Sciences and Mathematics.
                         </Typography>
 

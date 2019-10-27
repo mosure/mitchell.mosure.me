@@ -32,11 +32,11 @@ const Contact: React.FC = () => {
         <HomeItemContainer header='Contact Me' maxWidth={'500px'}>
             <Typography variant='body1' className={classes.topOffset} gutterBottom>
                 Feel free to message me on
-                &nbsp;
+                {' '}
                 <Link href={globals.linkedinUrl} target='_blank' color='secondary'>
                     LinkedIn
                 </Link>
-                &nbsp;
+                {' '}
                 or via email.
             </Typography>
 

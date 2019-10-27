@@ -81,7 +81,7 @@ const Landing: React.FC = () => {
                         <span className={classes.firstName}>
                             {globals.firstName}
                         </span>
-                        &nbsp;
+                        {' '}
                         <span className={classes.lastName}>
                             {globals.lastName}
                         </span>
