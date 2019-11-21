@@ -5,6 +5,7 @@ import * as delos from '../assets/travel/delos.jpg';
 import * as glacier from '../assets/travel/glacier.jpg';
 import * as muenster from '../assets/travel/muenster.jpg';
 import * as mykonos from '../assets/travel/mykonos.jpg';
+import * as san_francisco from '../assets/travel/san_francisco.jpg';
 import * as wood_post from '../assets/travel/wood_post.jpg';
 
 export const images: ImageList = [
@@ -31,5 +32,9 @@ export const images: ImageList = [
     {
         caption: 'Delos Wood Post',
         src: wood_post.default,
+    },
+    {
+        caption: 'San Francisco, California',
+        src: san_francisco.default,
     },
 ];
