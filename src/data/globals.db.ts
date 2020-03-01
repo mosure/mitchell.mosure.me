@@ -8,7 +8,7 @@ export const globals: Globals = {
     lastName: 'Mosure',
     statement: 'I build computer systems.',
     description: `
-I am a full-stack software engineer from Madison, WI with interests in
+I am a full-stack engineer from San Francisco, CA with interests in
 designing and building robust, high-quality technologies from silicon to web.
 `,
     email: 'mitchell@mosure.me',
